@@ -1,88 +1,243 @@
-<h2 class="section-title">Самотест: Чи потрібна вам допомога?</h2>
-    <ul>
-      <li>Вживаєте частіше, ніж планували?</li>
-      <li>Втратили контроль над дозою?</li>
-      <li>Родичі хвилюються за ва<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Анонімне та ефективне лікування алкогольної залежності у [місто]. Сертифікований лікар-нарколог. Запишіться на безкоштовну консультацію." />
-  <meta name="keywords" content="лікування алкоголізму [місто], нарколог, кодування, анонімна допомога, залежність від алкоголю, детоксикація, психотерапія" />
-  <title>Лікування алкогольної залежності | Нарколог у [місто]</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Анонімне лікування алкогольної залежності. Гіпнотерапія, акупунктура, ТЕС-терапія від лікаря Дмитра Циганкова." />
+  <title>Лікування алкогольної залежності | Лікар-нарколог Дмитро Циганков</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: #333; }
-    header, section, footer { padding: 2rem 1.5rem; max-width: 1200px; margin: auto; }
-    .hero { background: linear-gradient(to right, #e3f2fd, #ffffff); text-align: center; padding: 4rem 2rem; }
-    .hero h1 { font-size: 2.5rem; color: #3A86FF; }
-    .hero p { font-size: 1.25rem; margin: 1rem 0; }
-    .btn { background: #3A86FF; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; }
-    .section-title { font-size: 2rem; margin-bottom: 1rem; color: #3A86FF; }
-    .grid { display: grid; gap: 1.5rem; }
-    .methods { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .card { background: #f7f7f7; padding: 1.5rem; border-radius: 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
-    .card:hover { transform: translateY(-5px); }
-    .test, .testimonial, .contact-form { background: #fafafa; border-radius: 12px; padding: 1.5rem; margin-top: 2rem; }
-    footer { font-size: 0.875rem; color: #777; text-align: center; border-top: 1px solid #eee; }
-    input, textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; margin-top: 0.5rem; margin-bottom: 1rem; }
-    .cta-section { text-align: center; background: #49A078; color: white; padding: 3rem 1rem; border-radius: 12px; margin: 3rem auto; }
+    :root {
+      --primary: #2563eb;
+      --secondary: #49A078;
+      --accent: #f59e0b;
+      --text: #1f2937;
+      --light: #f9fafb;
+      --telegram: #0088cc;
+      --facebook: #1877f2;
+    }
+    
+    /* Базові стилі та скидання */
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #fff; color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    
+    /* Шапка сайту */
+    header { background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%); padding: 4rem 1.5rem; text-align: center; }
+    .hero-content { max-width: 900px; margin: auto; }
+    .hero-content h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); color: var(--primary); margin-bottom: 1rem; line-height: 1.2; }
+    .quote { font-style: italic; font-size: clamp(1rem, 3vw, 1.25rem); color: #4b5563; margin: 2rem 0; position: relative; padding: 0 1.5rem; }
+    .quote::before { content: '“'; font-size: 4rem; position: absolute; left: -5px; top: -25px; color: #d1d5db; opacity: 0.5; }
+    
+    /* Секції */
+    section { padding: clamp(2rem, 8vw, 4rem) 1.5rem; max-width: 1100px; margin: auto; }
+    .section-title { font-size: clamp(1.5rem, 4vw, 2.25rem); color: var(--primary); margin-bottom: 2rem; border-left: 5px solid var(--primary); padding-left: 1rem; }
+    
+    /* Соціальні кнопки */
+    .social-links { display: flex; gap: 0.75rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
+    .social-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; color: white; transition: transform 0.2s, opacity 0.3s; font-size: 0.95rem; }
+    .social-btn.tg { background: var(--telegram); }
+    .social-btn.fb { background: var(--facebook); }
+    .social-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    /* Інформація про лікаря */
+    .doctor-info { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; background: var(--light); padding: 2rem; border-radius: 24px; }
+    .doctor-text { flex: 1; min-width: 280px; }
+    
+    /* Диплом */
+    .diploma-container { display: flex; justify-content: center; margin-top: 2rem; width: 100%; }
+    .single-diploma-card { 
+      background: #f3f4f6; 
+      border: 2px dashed #cbd5e1; 
+      border-radius: 20px; 
+      width: 100%;
+      max-width: 650px; 
+      aspect-ratio: 4/3;
+      min-height: 300px;
+      display: flex; 
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center; 
+      text-align: center; 
+      padding: 1.5rem; 
+      transition: background 0.3s;
+    }
+    .single-diploma-card img { max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .diploma-placeholder { color: #64748b; padding: 1rem; }
+    .diploma-placeholder svg { width: 50px; height: 50px; margin-bottom: 1rem; color: #94a3b8; }
+
+    /* Методи */
+    .methods-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .method-item { border: 1px solid #e5e7eb; padding: clamp(1.5rem, 5vw, 2.5rem); border-radius: 20px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+    .method-item h3 { color: var(--primary); margin-top: 0; font-size: clamp(1.3rem, 3.5vw, 1.75rem); border-bottom: 2px solid #eff6ff; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+    .method-item ul { padding-left: 1.2rem; margin-top: 1rem; }
+    .method-item li { margin-bottom: 0.6rem; list-style-type: none; position: relative; }
+    .method-item li::before { content: '•'; color: var(--primary); font-weight: bold; position: absolute; left: -1.2rem; }
+    
+    /* Кнопки та форми */
+    .btn { background: var(--primary); color: white; padding: 1rem 2rem; border: none; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 1.1rem; text-decoration: none; display: inline-block; transition: background 0.3s, transform 0.2s; text-align: center; }
+    .btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+    
+    .test-box { background: #fff5f5; border: 1px solid #feb2b2; border-radius: 20px; padding: clamp(1.5rem, 5vw, 2.5rem); }
+
+    .cta-banner { background: var(--secondary); color: white; text-align: center; padding: 3rem 1.5rem; border-radius: 24px; margin: 4rem auto; max-width: 1000px; }
+    
+    form { display: grid; gap: 1rem; max-width: 600px; margin: auto; }
+    .form-group { display: flex; flex-direction: column; text-align: left; }
+    .form-group label { font-weight: 600; margin-bottom: 0.3rem; font-size: 0.9rem; }
+    input, textarea { padding: 0.9rem; border: 1px solid #d1d5db; border-radius: 12px; font-size: 1rem; font-family: inherit; width: 100%; }
+    input:focus, textarea:focus { outline: 2px solid var(--primary); border-color: transparent; }
+    
+    /* Футер */
+    footer { padding: 3rem 1.5rem; background: #111827; color: #9ca3af; text-align: center; font-size: 0.9rem; }
+    .footer-socials { display: flex; gap: 1.5rem; justify-content: center; margin: 1.5rem 0; }
+    .footer-link { color: #d1d5db; text-decoration: none; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
+    .footer-link:hover { color: white; }
+
+    /* Мобільна адаптація */
+    @media (max-width: 640px) {
+      header { padding: 3rem 1rem; }
+      .social-links { flex-direction: column; align-items: stretch; }
+      .social-btn { justify-content: center; }
+      .doctor-info { padding: 1.5rem; }
+      .single-diploma-card { min-height: 250px; padding: 1rem; }
+    }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Лікування алкогольної залежності у [місто]</h1>
-    <p>Анонімна допомога від сертифікованого нарколога. Поверніть контроль над своїм життям.</p>
-    <button class="btn">Записатись на консультацію</button>
+
+  <header>
+    <div class="hero-content">
+      <h1>Лікування алкогольної залежності</h1>
+      <p class="quote">“Алкоголь не допомагає знайти відповідь, він допомагає забути запитання”</p>
+      <p>Професійна допомога від лікаря-нарколога Дмитра Циганкова. Поверніть собі свободу та ясність життя.</p>
+      
+      <div class="social-links">
+        <a href="https://t.me/dv_doctor" target="_blank" class="social-btn tg">
+          <span>Написати у Telegram</span>
+        </a>
+        <a href="https://facebook.com/dtsyhankov" target="_blank" class="social-btn fb">
+          <span>Ми у Facebook</span>
+        </a>
+        <a href="#contact" class="btn">Консультація</a>
+      </div>
+    </div>
   </header>
 
-  <section>
-    <h2 class="section-title">Про лікаря</h2>
-    <p>Я — лікар-нарколог з досвідом понад 10 років. Допоміг більш ніж 500 пацієнтам подолати залежність. Пропоную анонімне, індивідуальне лікування з повагою до кожного.</p>
-  </section>
+  <section id="doctor">
+    <div class="doctor-info">
+      <div class="doctor-text">
+        <h2 class="section-title">Ваш лікар</h2>
+        <p><strong>Дмитро Циганков</strong> — сертифікований лікар-нарколог з понад 10-річним досвідом. Сертифікований гіпнотерапевт <strong>OMNI HYPNOSIS (Швейцарія)</strong>.</p>
+        <p>Мій підхід поєднує класичну медицину та сучасні немедикаментозні методи, що дозволяє отримати стабільний результат без болю та дискомфорту.</p>
+      </div>
+    </div>
 
-  <section class="test">с?</li>
-      <li>Спроби зупинитись були невдалі?</li>
-      <li>Після вживання — тривога або сором?</li>
-    </ul>
-    <p>Якщо хоча б дві відповіді — «так», варто звернутися по допомогу.</p>
-  </section>
-
-  <section>
-    <h2 class="section-title">Методи лікування</h2>
-    <div class="grid methods">
-      <div class="card">Детоксикація</div>
-      <div class="card">Кодування</div>
-      <div class="card">Індивідуальна психотерапія</div>
-      <div class="card">Післялікувальна підтримка</div>
+    <h3 style="margin-top: 3rem; color: var(--primary); text-align: center;">Кваліфікація та сертифікат</h3>
+    <div class="diploma-container">
+      <div class="single-diploma-card">
+        <div class="diploma-placeholder">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          <p><small>Сертифікат OMNI HYPNOSIS (Швейцарія)</small></p>
+        </div>
+        <!-- <img src="narcologist/site/omni.jpg" alt="Сертифікат OMNI HYPNOSIS (Швейцарія) Дмитро Циганков"> -->
+      </div>
     </div>
   </section>
 
-  <section class="testimonial">
-    <h2 class="section-title">Відгуки пацієнтів</h2>
-    <blockquote>"Я втратив майже все, але лікування допомогло повернути себе. Щиро вдячний лікарю."</blockquote>
-    <blockquote>"Завдяки підтримці ми з чоловіком пройшли цей шлях разом. Життя змінилося."</blockquote>
+  <section id="test">
+    <div class="test-box">
+      <h2 style="margin-top:0">Самотест: Чи потрібна вам допомога?</h2>
+      <ul style="padding-left: 1.2rem;">
+        <li style="margin-bottom: 0.5rem;">Вживаєте частіше, ніж планували?</li>
+        <li style="margin-bottom: 0.5rem;">Втратили контроль над дозою?</li>
+        <li style="margin-bottom: 0.5rem;">Родичі хвилюються за вас?</li>
+        <li style="margin-bottom: 0.5rem;">Спроби зупинитись були невдалі?</li>
+        <li style="margin-bottom: 0.5rem;">Після вживання — тривога або сором?</li>
+      </ul>
+      <p style="margin-top: 1.5rem; padding: 1rem; background: #fff; border-radius: 10px; display: inline-block;"><strong>Якщо хоча б дві відповіді — «так», варто звернутися по допомогу.</strong></p>
+    </div>
   </section>
 
-  <section class="cta-section">
-    <h2>Перша консультація — безкоштовно</h2>
-    <p>Дізнайтесь, як можна почати одужання вже сьогодні</p>
-    <button class="btn">Отримати консультацію</button>
+  <section id="methods">
+    <h2 class="section-title">Немедикаментозні методи лікування</h2>
+    <div class="methods-list">
+      
+      <div class="method-item">
+        <h3>1. Гіпноз (гіпнотерапія)</h3>
+        <p>Ефективний метод позбавлення від алкогольної залежності, який полягає у формуванні у пацієнта відрази до алкоголю та глибокого внутрішнього переконання про шкідливість вживання алкогольних напоїв на підсвідомому рівні.</p>
+        <p>Під час сеансу гіпнотерапії в підсвідомості пацієнта, який перебуває в стані максимального фізичного та ментального розслаблення, фіксуються певні навіювання про шкоду, яку приносить алкоголь. В подальшому ці навіювання забезпечують негативне ставлення пацієнта до алкоголю і, як наслідок, позбавлення алкогольної залежності.</p>
+        <p>Лікар-нарколог Циганков Дмитро є сертифікованим гіпнотерапевтом <strong>OMNI HYPNOSIS (Швейцарія)</strong>.</p>
+      </div>
+
+      <div class="method-item">
+        <h3>2. Акупунктура вушної раковини (голкотерапія)</h3>
+        <p>Ефективний перевірений метод, що дозволяє повернутися до тверезого життя вже за 5 сеансів. Лікування відбувається згідно із затвердженими протоколами <strong>ACU-DETOX</strong>.</p>
+        <p>Використовується для усунення тяги, тривожності, поганого сну та агресії. Під час голковколювання виробляються ендорфіни, які знижують рівень стресу. ВООЗ визнає акупунктуру ефективним засобом лікування узалежнень (2008).</p>
+      </div>
+
+      <div class="method-item">
+        <h3>3. Транскраніальна електростимуляція (ТЕС)</h3>
+        <p>Подразнення префронтальної кори головного мозку (яка відповідає за волю та мотивацію) слабким електричним струмом. Допомагає відновити ділянки, уражені внаслідок зловживання алкоголем.</p>
+        <p><strong>Результати методу:</strong></p>
+        <ul>
+          <li>зниження тяги до алкоголю</li>
+          <li>покращення настрою та сну</li>
+          <li>нормалізація тиску та тонусу судин</li>
+          <li>посилення імунної системи</li>
+        </ul>
+      </div>
+
+      <div class="method-item">
+        <h3>4. Індивідуальна психотерапія</h3>
+        <p>Дозволяє розібратися в глибинних причинах виникнення залежності та знайти індивідуальні шляхи вирішення проблеми для кожного пацієнта.</p>
+      </div>
+
+    </div>
   </section>
 
-  <section class="contact-form">
-    <h2 class="section-title">Зв'язок зі мною</h2>
+  <section class="cta-banner">
+    <h2>Почніть шлях до тверезого життя в комфортних та анонімних умовах.</h2>
+    <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://t.me/your_username" class="social-btn tg">Telegram чат</a>
+      <a href="#contact" class="btn" style="background: white; color: var(--secondary);">Надіслати заявку</a>
+    </div>
+  </section>
+
+  <!-- <section id="contact">
+    <h2 class="section-title">Записатись на прийом</h2>
     <form>
-      <label>Ваше ім’я:<input type="text" required></label>
-      <label>Телефон:<input type="tel" required></label>
-      <label>Месенджер (Viber/Telegram):<input type="text"></label>
-      <label>Повідомлення:<textarea rows="4"></textarea></label>
-      <button type="submit" class="btn">Надіслати</button>
+      <div class="form-group">
+        <label>Ваше ім’я</label>
+        <input type="text" placeholder="Як до вас звертатися?" required>
+      </div>
+      <div class="form-group">
+        <label>Телефон</label>
+        <input type="tel" placeholder="+38 (0XX) XXX-XX-XX" required>
+      </div>
+      <div class="form-group">
+        <label>Ваше повідомлення</label>
+        <textarea rows="4" placeholder="Коротко опишіть вашу ситуацію..."></textarea>
+      </div>
+      <button type="submit" class="btn">Надіслати заявку</button>
     </form>
-  </section>
+  </section> -->
 
   <footer>
-    <p>&copy; 2025 Лікування алкогольної залежності у [місто]. Усі права захищені. | Конфіденційність гарантується.</p>
+    <p>&copy; 2025 Лікування алкогольної залежності | Лікар Дмитро Циганков</p>
+    
+    <div class="footer-socials">
+      <a href="https://t.me//dv_doctor" class="footer-link" target="_blank">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.462 8.357l-1.513 7.129c-.115.514-.422.64-.854.397l-2.311-1.704-1.114 1.072c-.123.123-.226.226-.464.226l.166-2.349 4.274-3.862c.186-.165-.04-.257-.289-.092l-5.282 3.325-2.277-.712c-.494-.154-.504-.494.103-.73l8.894-3.427c.412-.154.773.092.61.719z"/></svg>
+        Telegram
+      </a>
+      <a href="https://facebook.com/dtsyhankov" class="footer-link" target="_blank">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+    </div>
+    
+    <p style="opacity: 0.7; font-size: 0.8rem;">Анонімність та конфіденційність гарантовані. Згідно зі стандартами ВООЗ.</p>
   </footer>
+
 </body>
 </html>
