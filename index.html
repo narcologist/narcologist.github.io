@@ -308,8 +308,14 @@
             font-size: 1rem;
         }
 
-        .btn-more i { transition: transform 0.3s ease; }
-        .btn-more.active i { transform: rotate(180deg); }
+        .btn-more i { 
+            transition: transform 0.4s ease; 
+        }
+        
+        /* Зміна: коли кнопка активна, іконка повертається вгору */
+        .btn-more.active i { 
+            transform: rotate(180deg); 
+        }
 
         .acu-icon { width: 40px; height: 40px; display: block; }
 
@@ -437,21 +443,18 @@
             </div>
 
             <div class="certs-grid">
-                <!-- Картка 1 -->
                 <div class="cert-card" onclick="openCertModal(this)">
                     <div class="cert-image-box">
                         <img src="omni.jpg" alt="OMNI HYPNOSIS" onerror="this.src='https://via.placeholder.com/600x450?text=OMNI+Certificate'">
                     </div>
                     <div class="cert-label">Сертифікат Гіпнотерапевта OMNI (Швейцарія)</div>
                 </div>
-                <!-- Картка 2 -->
                 <div class="cert-card" onclick="openCertModal(this)">
                     <div class="cert-image-box">
                         <img src="psychoterapist.jpg" alt="Психотерапія" onerror="this.src='https://via.placeholder.com/600x450?text=Psychotherapist+Certificate'">
                     </div>
                     <div class="cert-label">Сертифікат Психотерапевта</div>
                 </div>
-                <!-- Картка 3 -->
                 <div class="cert-card" onclick="openCertModal(this)">
                     <div class="cert-image-box">
                         <img src="acupuncture_ukr.jpg" alt="Акупунктура" onerror="this.src='https://via.placeholder.com/600x450?text=Acupuncture+Certificate'">
@@ -499,8 +502,7 @@
                         <h3>Акупунктура вушної раковини (голкотерапія)</h3>
                         <p>Традиційний метод рефлексотерапії.</p>
                         <div class="method-details" id="detail-acu">
-                            <p>Голковколювання активних точок на тілі людини використовується з лікувальною метою з давніх давен. Цей ефективний перевірений метод дозволив багатьом пацієнтам повернутися до тверезого життя вже за 5 сеансів. Лікування відбувається згідно затверджених протоколів.Протокол акупунктури ACU- DETOX  використовується для усунення таких симптомів відміни алкоголю як тяга, тривожність, поганий сон, агресія, депресивні стани. Під час голковколювання виробляються ендорфіни, які допомагають знизити рівень стресу та  тривоги. Лікар Циганков Дмитро за допомогою голкотерапії допомагає пацієнтам позбутися також і нікотинової залежності. Всесвітня організація охорони здоров’я (ВООЗ) визнає акупунктуру ефективним засобом лікування багатьох захворювань, узалежнень в тому числі (2008).
-</p>
+                            <p>Голковколювання активних точок на тілі людини використовується з лікувальною метою з давніх давен. Цей ефективний перевірений метод дозволив багатьом пацієнтам повернутися до тверезого життя вже за 5 сеансів. Лікування відбувається згідно затверджених протоколів.Протокол акупунктури ACU- DETOX  використовується для усунення таких симптомів відміни алкоголю як тяга, тривожність, поганий сон, агресія, депресивні стани. Під час голковколювання виробляються ендорфіни, які допомагають знизити рівень стресу та  тривоги. Лікар Циганков Дмитро за допомогою голкотерапії допомагає пацієнтам позбутися також і нікотинової залежності. Всесвітня організація охорони здоров’я (ВООЗ) визнає акупунктуру ефективним засобом лікування багатьох захворювань, узалежнень в тому числі (2008).</p>
                         </div>
                     </div>
                     <button class="btn-more" onclick="toggleDetail('acu')">
@@ -588,11 +590,12 @@
                 <a href="viber://chat?number=%2B380676704004"><i data-lucide="message-circle" size="18"></i> Viber</a>
                 <a href="https://facebook.com/dtsyhankov"><i data-lucide="facebook" size="18"></i> Facebook</a>
             </nav>
-            <p class="copyright">&copy; 2025 Лікар-нарколог Дмитро Циганков. Конфіденційність гарантована.</p>
+            <p class="copyright">&copy; © 2024-2026 Лікар-нарколог Дмитро Циганков. Конфіденційність гарантована.</p>
         </div>
     </footer>
 
     <script>
+        // Ініціалізація іконок
         lucide.createIcons();
 
         // Логіка тесту
@@ -638,15 +641,15 @@
             } else {
                 resultText.innerText = "Критичних ознак залежності не виявлено. Однак, якщо ви відчуваєте дискомфорт, ми завжди готові допомогти.";
             }
+            lucide.createIcons(); // Перемалювати іконку в результаті
         }
 
         loadQuestion();
 
-        // Модальне вікно (Виправлене)
+        // Модальне вікно
         function openCertModal(element) {
             const modal = document.getElementById('certModal');
             const modalImg = document.getElementById('modalImage');
-            // Беремо src безпосередньо з картинки, яка знаходиться всередині клікнутої картки
             const imgSrc = element.querySelector('img').src;
             
             modalImg.src = imgSrc;
@@ -660,6 +663,7 @@
             document.body.style.overflow = 'auto';
         }
 
+        // Перемикання деталей методів
         function toggleDetail(id) {
             const detail = document.getElementById('detail-' + id);
             const card = detail.closest('.method-card');
@@ -668,9 +672,11 @@
             
             const isActive = detail.classList.contains('active');
             
+            // Змінюємо стани
             detail.classList.toggle('active');
             button.classList.toggle('active');
             
+            // Зміна тексту
             span.innerText = !isActive ? 'Згорнути' : 'Детальніше';
         }
 
