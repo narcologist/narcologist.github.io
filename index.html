@@ -201,6 +201,15 @@
 
         .method-icon-container { margin-bottom: 1.5rem; color: var(--primary); }
 
+        /* Custom Acupuncture Icon Styling */
+        .acupuncture-icon {
+            display: flex;
+            gap: 4px;
+            align-items: flex-end;
+            height: 40px;
+            padding-bottom: 4px;
+        }
+
         .method-details {
             max-height: 0;
             overflow: hidden;
@@ -210,7 +219,7 @@
         }
 
         .method-details.active {
-            max-height: 1000px; /* Достатньо велике значення для контенту */
+            max-height: 1000px;
             margin-top: 1rem;
             border-top: 1px solid #f1f5f9;
             padding-top: 1rem;
@@ -458,6 +467,7 @@
     </footer>
 
     <script>
+        // Ініціалізація іконок Lucide
         lucide.createIcons();
 
         // Тест
@@ -503,27 +513,26 @@
             const button = detail.closest('.method-card').querySelector('.btn-more');
             const span = button.querySelector('span');
             
-            // Toggle класів
             const isActive = detail.classList.toggle('active');
             button.classList.toggle('active');
-            
-            // Зміна тексту
             span.innerText = isActive ? 'Згорнути' : 'Детальніше';
         }
 
         // Модальне вікно
         function openCertModal(el) {
             const m = document.getElementById('certModal');
-            document.getElementById('modalImage').src = el.querySelector('img').src;
+            const img = el.querySelector('img');
+            document.getElementById('modalImage').src = img.src;
             m.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
+        
         function closeModal() {
             document.getElementById('certModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
-        window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+            window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
     </script>
 </body>
 </html>
