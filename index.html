@@ -3,14 +3,43 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Анонімне лікування алкогольної залежності. Гіпнотерапія, акупунктура, ТЕС-терапія від лікаря Дмитра Циганкова." />
+    
+    <!-- SEO Основне -->
     <title>Лікування алкогольної залежності | Лікар-нарколог Дмитро Циганков</title>
+    <meta name="description" content="Анонімне лікування алкогольної залежності в Україні. Гіпнотерапія, акупунктура, ТЕС-терапія від лікаря Дмитра Циганкова. Професійна допомога та конфіденційність." />
+    <meta name="keywords" content="лікування алкоголізму, нарколог Україна, Дмитро Циганков, гіпноз від алкоголю, ТЕС-терапія, акупунктура, кодування, анонімна допомога" />
+    <link rel="canonical" href="https://narcologist.github.io/" />
 
-    <!-- Favicon: Lucide Shield Check -->
+    <!-- Open Graph (для соцмереж) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Лікування алкогольної залежності | Лікар Дмитро Циганков" />
+    <meta property="og:description" content="Анонімне лікування алкогольної залежності. Гіпнотерапія, акупунктура, ТЕС-терапія." />
+    <meta property="og:url" content="https://narcologist.github.io/" />
+    <meta property="og:image" content="Tsyhankov_Dmytro.jpg" />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'%3E%3C/path%3E%3Cpath d='m9 12 2 2 4-4'%3E%3C/path%3E%3C/svg%3E">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Мікророзмітка Schema.org для Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Лікар-нарколог Дмитро Циганков",
+      "description": "Анонімне лікування алкогольної залежності методами гіпнотерапії, акупунктури та ТЕС-терапії.",
+      "telephone": "+380676704004",
+      "url": "https://your-domain.com.ua",
+      "medicalSpecialty": "Narcology",
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Гіпнотерапія" },
+        { "@type": "MedicalProcedure", "name": "Акупунктура" },
+        { "@type": "MedicalProcedure", "name": "ТЕС-терапія" }
+      ]
+    }
+    </script>
 
     <style>
         :root {
@@ -29,7 +58,7 @@
             --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
 
         body { 
             font-family: 'Inter', sans-serif; 
@@ -201,7 +230,6 @@
 
         .method-icon-container { margin-bottom: 1.5rem; color: var(--primary); }
 
-        /* Custom Acupuncture Icon Styling */
         .acupuncture-icon {
             display: flex;
             gap: 4px;
@@ -240,13 +268,8 @@
             width: fit-content;
         }
 
-        .btn-more svg { 
-            transition: transform 0.3s ease; 
-        }
-        
-        .btn-more.active svg { 
-            transform: rotate(180deg); 
-        }
+        .btn-more svg { transition: transform 0.3s ease; }
+        .btn-more.active svg { transform: rotate(180deg); }
 
         /* Test */
         .test-container {
@@ -299,20 +322,20 @@
     <div id="certModal" class="modal-overlay" onclick="closeModal()">
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closeModal()">Закрити</button>
-            <img id="modalImage" src="" alt="Сертифікат">
+            <img id="modalImage" src="" alt="Сертифікат лікаря Циганкова">
         </div>
     </div>
 
     <header>
         <div class="container hero-content">
             <i data-lucide="shield-check" size="48" color="#2563eb" style="margin-bottom: 1.5rem;"></i>
-            <h1>Лікування алкогольної залежності</h1>
-            <p class="hero-description">Професійна анонімна допомога від лікаря-нарколога. Поверніть контроль над власним життям.</p>
+            <h1>Анонімне лікування алкогольної залежності</h1>
+            <p class="hero-description">Професійна допомога від лікаря-нарколога. Поверніть контроль над власним життям.</p>
             
             <div class="social-group">
-                <a href="https://t.me/dv_doctor" target="_blank" class="btn-social btn-tg"><i data-lucide="send"></i> Telegram</a>
+                <a href="https://t.me/dv_doctor" target="_blank" class="btn-social btn-tg" rel="noopener noreferrer"><i data-lucide="send"></i> Telegram</a>
                 <a href="viber://chat?number=%2B380676704004" class="btn-social btn-viber"><i data-lucide="message-circle"></i> Viber</a>
-                <a href="https://facebook.com/dtsyhankov" target="_blank" class="btn-social btn-fb"><i data-lucide="facebook"></i> Facebook</a>
+                <a href="https://facebook.com/dtsyhankov" target="_blank" class="btn-social btn-fb" rel="noopener noreferrer"><i data-lucide="facebook"></i> Facebook</a>
             </div>
 
             <div class="quote-box">
@@ -321,153 +344,153 @@
         </div>
     </header>
 
-    <section id="doctor">
-        <div class="container">
-            <div class="doctor-grid">
-                <div class="doctor-photo">
-                    <img src="Tsyhankov_Dmytro.jpg" alt="Лікар Дмитро Циганков" onerror="this.src='https://via.placeholder.com/400x500?text=Дмитро+Циганков'">
+    <main>
+        <section id="doctor">
+            <div class="container">
+                <div class="doctor-grid">
+                    <article class="doctor-photo">
+                        <img src="Tsyhankov_Dmytro.jpg" alt="Лікар-нарколог Дмитро Циганков" onerror="this.src='https://via.placeholder.com/400x500?text=Дмитро+Циганков'">
+                    </article>
+                    <article class="doctor-bio">
+                        <h2 class="section-title">Ваш лікар</h2>
+                        <p style="font-size: 1.15rem; margin-bottom: 1.5rem;"><strong>Дмитро Циганков</strong> — сертифікований лікар-нарколог, гіпнотерапевт та психотерапевт.</p>
+                        <p>Мій підхід поєднує медичну точність та глибоке розуміння психології. Я допомагаю знайти нові джерела радості у тверезому житті.</p>
+                    </article>
                 </div>
-                <div class="doctor-bio">
-                    <h2 class="section-title">Ваш лікар</h2>
-                    <p style="font-size: 1.15rem; margin-bottom: 1.5rem;"><strong>Дмитро Циганков</strong> — сертифікований лікар-нарколог, гіпнотерапевт та психотерапевт.</p>
-                    <p>Мій підхід поєднує медичну точність та глибоке розуміння психології. Я допомагаю знайти нові джерела радості у тверезому житті.</p>
+
+                <div class="certs-grid">
+                    <div class="cert-card" onclick="openCertModal(this)">
+                        <div class="cert-image-box"><img src="omni.jpg" alt="Сертифікат Гіпнотерапевта OMNI (Швейцарія)" onerror="this.src='https://via.placeholder.com/600x450?text=OMNI'"></div>
+                        <h3 class="cert-label" style="font-size: 1rem; font-weight: 500;">Сертифікат Гіпнотерапевта OMNI (Швейцарія)</h3>
+                    </div>
+                    <div class="cert-card" onclick="openCertModal(this)">
+                        <div class="cert-image-box"><img src="psychoterapist.jpg" alt="Сертифікат Психотерапевта" onerror="this.src='https://via.placeholder.com/600x450?text=Психотерапія'"></div>
+                        <h3 class="cert-label" style="font-size: 1rem; font-weight: 500;">Сертифікат Психотерапевта</h3>
+                    </div>
+                    <div class="cert-card" onclick="openCertModal(this)">
+                        <div class="cert-image-box"><img src="acupuncture_ukr.jpg" alt="Сертифікат з Акупунктури" onerror="this.src='https://via.placeholder.com/600x450?text=Акупунктура'"></div>
+                        <h3 class="cert-label" style="font-size: 1rem; font-weight: 500;">Сертифікат з Акупунктури</h3>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="certs-grid">
-                <div class="cert-card" onclick="openCertModal(this)">
-                    <div class="cert-image-box"><img src="omni.jpg" alt="OMNI" onerror="this.src='https://via.placeholder.com/600x450?text=OMNI'"></div>
-                    <div class="cert-label">Сертифікат Гіпнотерапевта OMNI (Швейцарія)</div>
-                </div>
-                <div class="cert-card" onclick="openCertModal(this)">
-                    <div class="cert-image-box"><img src="psychoterapist.jpg" alt="Психотерапія" onerror="this.src='https://via.placeholder.com/600x450?text=Психотерапія'"></div>
-                    <div class="cert-label">Сертифікат Психотерапевта</div>
-                </div>
-                <div class="cert-card" onclick="openCertModal(this)">
-                    <div class="cert-image-box"><img src="acupuncture_ukr.jpg" alt="Акупунктура" onerror="this.src='https://via.placeholder.com/600x450?text=Акупунктура'"></div>
-                    <div class="cert-label">Сертифікат з Акупунктури</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="methods">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Методи лікування</h2>
-            </div>
-
-            <div class="methods-grid">
-                <!-- Гіпноз -->
-                <div class="method-card">
-                    <div class="method-icon-container"><i data-lucide="brain" size="40"></i></div>
-                    <h3>Гіпноз (гіпнотерапія)</h3>
-                    <p>Використання глибинних станів розслаблення для корекції залежної поведінки.</p>
-                    <div class="method-details" id="detail-hypno">
-                        <p>Ефективний метод позбавлення від алкогольної залежності, який полягає у формуванні у пацієнта відрази до алкоголю та глибокого внутрішнього переконання про шкідливість вживання алкогольних напоїв на підсвідомому рівні. Під час сеансу гіпнотерапії в підсвідомості пацієнта, який перебуває в стані максимального фізичного та ментального розслаблення, фіксуються певні навіювання про шкоду, яку приносить алкоголь. В подальшому ці навіювання забезпечують негативне ставлення пацієнта до алкоголю і, як наслідок, позбавлення алкогольної залежності. Лікар-нарколог Циганков Дмитро є сертифікованим гіпнотерапевтом OMNI HYPNOSIS (Швейцарія) і успішно використовує гіпнотерапію для лікування алкоголізму. Десятки пацієнтів вирішили свою проблему саме завдяки цьому ефективному, безболісному методу.</p>
-                    </div>
-                    <button class="btn-more" onclick="toggleDetail('hypno')">
-                        <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
-                    </button>
+        <section id="methods">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Методи лікування алкогольної залежності</h2>
                 </div>
 
-                <!-- Акупунктура -->
-                <div class="method-card">
-                    <div class="method-icon-container">
-                        <!-- Custom SVG for Acupuncture Needles -->
-                        <svg class="acupuncture-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-                            <line x1="10" y1="35" x2="10" y2="15" />
-                            <rect x="8" y="5" width="4" height="10" rx="1" fill="currentColor" stroke="none" />
-                            <line x1="20" y1="38" x2="20" y2="10" />
-                            <rect x="18" y="0" width="4" height="10" rx="1" fill="currentColor" stroke="none" />
-                            <line x1="30" y1="35" x2="30" y2="18" />
-                            <rect x="28" y="8" width="4" height="10" rx="1" fill="currentColor" stroke="none" />
-                        </svg>
-                    </div>
-                    <h3>Акупунктура вушної раковини (голкотерапія)</h3>
-                    <p>Традиційний метод рефлексотерапії за протоколом ACU-DETOX.</p>
-                    <div class="method-details" id="detail-acu">
-                        <p>Голковколювання активних точок на тілі людини використовується з лікувальною метою з давніх давен. Цей ефективний перевірений метод дозволив багатьом пацієнтам повернутися до тверезого життя вже за 5 сеансів. Лікування відбувається згідно затверджених протоколів.Протокол акупунктури ACU- DETOX  використовується для усунення таких симптомів відміни алкоголю як тяга, тривожність, поганий сон, агресія, депресивні стани. Під час голковколювання виробляються ендорфіни, які допомагають знизити рівень стресу та  тривоги. Лікар Циганков Дмитро за допомогою голкотерапії допомагає пацієнтам позбутися також і нікотинової залежності. Всесвітня організація охорони здоров’я (ВООЗ) визнає акупунктуру ефективним засобом лікування багатьох захворювань, узалежнень в тому числі (2008).</p>
-                    </div>
-                    <button class="btn-more" onclick="toggleDetail('acu')">
-                        <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
-                    </button>
-                </div>
+                <div class="methods-grid">
+                    <!-- Гіпноз -->
+                    <article class="method-card">
+                        <div class="method-icon-container"><i data-lucide="brain" size="40"></i></div>
+                        <h3>Гіпноз (гіпнотерапія)</h3>
+                        <p>Використання глибинних станів розслаблення для корекції залежної поведінки.</p>
+                        <div class="method-details" id="detail-hypno">
+                            <p>Ефективний метод позбавлення від алкогольної залежності, який полягає у формуванні у пацієнта відрази до алкоголю та глибокого внутрішнього переконання про шкідливість вживання алкогольних напоїв на підсвідомому рівні. Під час сеансу гіпнотерапії в підсвідомості пацієнта, який перебуває в стані максимального фізичного та ментального розслаблення, фіксуються певні навіювання про шкоду, яку приносить алкоголь. В подальшому ці навіювання забезпечують негативне ставлення пацієнта до алкоголю і, як наслідок, позбавлення алкогольної залежності. Лікар-нарколог Циганков Дмитро є сертифікованим гіпнотерапевтом OMNI HYPNOSIS (Швейцарія) і успішно використовує гіпнотерапію для лікування алкоголізму. Десятки пацієнтів вирішили свою проблему саме завдяки цьому ефективному, безболісному методу.</p>
+                        </div>
+                        <button class="btn-more" onclick="toggleDetail('hypno')" aria-expanded="false">
+                            <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
+                        </button>
+                    </article>
 
-                <!-- ТЕС -->
-                <div class="method-card">
-                    <div class="method-icon-container"><i data-lucide="zap" size="40"></i></div>
-                    <h3>ТЕС-терапія</h3>
-                    <p>Електростимуляція захисних механізмів мозку.</p>
-                    <div class="method-details" id="detail-tes">
-                        <p>Префронтальна кора головного мозку відповідає за вольове напруження (сила волі), увагу і мотивацію. Внаслідок зловживання алкоголем у пацієнтів відбувається ураження префронтальної кори і,як наслідок, спостерігається втрата інтересу до оточуючого середовища.Пацієнти також можуть бути менш уважними, ніж зазвичай. Пошкодження цієї ділянки в людини також призводить до відсутності мотивації робити щось для себе та/або для інших.Подразнення префронтальної кори головного мозку слабким електричним струмом за допомогою спеціального апарату дозволяє ефективно лікувати симптоми,що супроводжують алкогольну залежність-депресивні та тривожні стани, порушення сну.В результаті використання даного методу спостерігається:
+                    <!-- Акупунктура -->
+                    <article class="method-card">
+                        <div class="method-icon-container">
+                            <svg class="acupuncture-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                                <line x1="10" y1="35" x2="10" y2="15" />
+                                <rect x="8" y="5" width="4" height="10" rx="1" fill="currentColor" stroke="none" />
+                                <line x1="20" y1="38" x2="20" y2="10" />
+                                <rect x="18" y="0" width="4" height="10" rx="1" fill="currentColor" stroke="none" />
+                                <line x1="30" y1="35" x2="30" y2="18" />
+                                <rect x="28" y="8" width="4" height="10" rx="1" fill="currentColor" stroke="none" />
+                            </svg>
+                        </div>
+                        <h3>Акупунктура вушної раковини (голкотерапія)</h3>
+                        <p>Традиційний метод рефлексотерапії за протоколом ACU-DETOX.</p>
+                        <div class="method-details" id="detail-acu">
+                            <p>Голковколювання активних точок на тілі людини використовується з лікувальною метою з давніх давен. Цей ефективний перевірений метод дозволив багатьом пацієнтам повернутися до тверезого життя вже за 5 сеансів. Лікування відбувається згідно затверджених протоколів.Протокол акупунктури ACU- DETOX  використовується для усунення таких симптомів відміни алкоголю як тяга, тривожність, поганий сон, агресія, депресивні стани. Під час голковколювання виробляються ендорфіни, які допомагають знизити рівень стресу та  тривоги. Лікар Циганков Дмитро за допомогою голкотерапії допомагає пацієнтам позбутися також і нікотинової залежності. Всесвітня організація охорони здоров’я (ВООЗ) визнає акупунктуру ефективним засобом лікування багатьох захворювань, узалежнень в тому числі (2008).</p>
+                        </div>
+                        <button class="btn-more" onclick="toggleDetail('acu')" aria-expanded="false">
+                            <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
+                        </button>
+                    </article>
+
+                    <!-- ТЕС -->
+                    <article class="method-card">
+                        <div class="method-icon-container"><i data-lucide="zap" size="40"></i></div>
+                        <h3>ТЕС-терапія</h3>
+                        <p>Електростимуляція захисних механізмів мозку.</p>
+                        <div class="method-details" id="detail-tes">
+                            <p>Префронтальна кора головного мозку відповідає за вольове напруження (сила волі), увагу і мотивацію. Внаслідок зловживання алкоголем у пацієнтів відбувається ураження префронтальної кори і,як наслідок, спостерігається втрата інтересу до оточуючого середовища.Пацієнти також можуть бути менш уважними, ніж зазвичай. Пошкодження цієї ділянки в людини також призводить до відсутності мотивації робити щось для себе та/або для інших.Подразнення префронтальної кори головного мозку слабким електричним струмом за допомогою спеціального апарату дозволяє ефективно лікувати симптоми,що супроводжують алкогольну залежність-депресивні та тривожні стани, порушення сну.В результаті використання даного методу спостерігається:
                                - зниження тяги до алкоголю
                                - покращення настрою та підвищення якості життя
                                - нормалізація сну та зниження втомлюваності
                                - нормалізація тонусу кровоносних судин і показників артеріального тиску
                                - посилення активності імунної системи</p>
-                    </div>
-                    <button class="btn-more" onclick="toggleDetail('tes')">
-                        <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
-                    </button>
-                </div>
+                        </div>
+                        <button class="btn-more" onclick="toggleDetail('tes')" aria-expanded="false">
+                            <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
+                        </button>
+                    </article>
 
-                <!-- Психотерапія -->
-                <div class="method-card">
-                    <div class="method-icon-container"><i data-lucide="heart" size="40"></i></div>
-                    <h3>Індивідуальна психотерапія</h3>
-                    <p>Робота з причинами, а не лише з наслідками залежності.</p>
-                    <div class="method-details" id="detail-psy">
-                        <p>Дозволяє розібратися в глибинних причинах виникнення та формування алкогольної залежності та знаходити шляхи вирішення цієї проблеми індивідуально для кожного пацієнта.</p>
-                    </div>
-                    <button class="btn-more" onclick="toggleDetail('psy')">
-                        <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
-                    </button>
+                    <!-- Психотерапія -->
+                    <article class="method-card">
+                        <div class="method-icon-container"><i data-lucide="heart" size="40"></i></div>
+                        <h3>Індивідуальна психотерапія</h3>
+                        <p>Робота з причинами, а не лише з наслідками залежності.</p>
+                        <div class="method-details" id="detail-psy">
+                            <p>Дозволяє розібратися в глибинних причинах виникнення та формування алкогольної залежності та знаходити шляхи вирішення цієї проблеми індивідуально для кожного пацієнта.</p>
+                        </div>
+                        <button class="btn-more" onclick="toggleDetail('psy')" aria-expanded="false">
+                            <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
+                        </button>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="test">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Експрес-тест</h2>
-                <p>Чи є у вас ознаки залежності?</p>
-            </div>
-            
-            <div class="test-container" id="quiz-box">
-                <div id="quiz-step">
-                    <p class="test-question" id="question-text">Завантаження...</p>
-                    <div class="test-options" id="options-box"></div>
+        <section id="test">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Експрес-тест на алкогольну залежність</h2>
+                    <p>Відверті відповіді допоможуть вам зрозуміти стан проблеми.</p>
                 </div>
                 
-                <div id="quiz-result" class="test-result">
-                    <i data-lucide="alert-triangle" size="56" color="#dc2626" style="margin-bottom: 1.5rem;"></i>
-                    <h3 id="result-title" style="margin-bottom: 1rem; color: var(--danger);">Результат</h3>
-                    <p id="result-text" style="margin-bottom: 2rem;"></p>
-                    <a href="https://t.me/dv_doctor" class="btn-social btn-tg">Отримати консультацію</a>
+                <div class="test-container" id="quiz-box">
+                    <div id="quiz-step">
+                        <p class="test-question" id="question-text">Завантаження...</p>
+                        <div class="test-options" id="options-box"></div>
+                    </div>
+                    
+                    <div id="quiz-result" class="test-result">
+                        <i data-lucide="alert-triangle" size="56" color="#dc2626" style="margin-bottom: 1.5rem;"></i>
+                        <h3 id="result-title" style="margin-bottom: 1rem; color: var(--danger);">Результат аналізу</h3>
+                        <p id="result-text" style="margin-bottom: 2rem;"></p>
+                        <a href="https://t.me/dv_doctor" class="btn-social btn-tg">Записатися на консультацію</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
-            <span class="footer-logo">Дмитро Циганков</span>
+            <span class="footer-logo">Лікар Дмитро Циганков</span>
             <nav class="footer-nav">
                 <a href="#doctor">Про лікаря</a>
                 <a href="#methods">Методи</a>
                 <a href="#test">Тест</a>
-                <a href="https://t.me/dv_doctor"><i data-lucide="send" size="18"></i> Telegram</a>
+                <a href="https://t.me/dv_doctor" rel="noopener noreferrer"><i data-lucide="send" size="18"></i> Telegram</a>
                 <a href="viber://chat?number=%2B380676704004"><i data-lucide="message-circle" size="18"></i> Viber</a>
-                <a href="https://facebook.com/dtsyhankov"><i data-lucide="facebook" size="18"></i> Facebook</a>
+                <a href="https://facebook.com/dtsyhankov" rel="noopener noreferrer"><i data-lucide="facebook" size="18"></i> Facebook</a>
             </nav>
-            <p>&copy; 2024-2026 Лікар Дмитро Циганков. Конфіденційно.</p>
+            <p>&copy; 2024-2026 Лікар Дмитро Циганков. Конфіденційна допомога при алкогольній залежності.</p>
         </div>
     </footer>
 
     <script>
-        // Ініціалізація іконок Lucide
         lucide.createIcons();
 
         // Тест
@@ -503,7 +526,7 @@
             const res = document.getElementById('quiz-result');
             res.style.display = 'block';
             const txt = document.getElementById('result-text');
-            txt.innerText = score >= 2 ? "Рекомендуємо звернутися за консультацією." : "Критичних ознак не виявлено, але будьте обережні.";
+            txt.innerText = score >= 2 ? "Ваші відповіді вказують на можливу залежність. Рекомендуємо звернутися за професійною консультацією." : "Критичних ознак залежності зараз не виявлено, але будьте уважні до свого здоров'я.";
         }
         loadQuestion();
 
@@ -515,6 +538,7 @@
             
             const isActive = detail.classList.toggle('active');
             button.classList.toggle('active');
+            button.setAttribute('aria-expanded', isActive);
             span.innerText = isActive ? 'Згорнути' : 'Детальніше';
         }
 
@@ -532,7 +556,7 @@
             document.body.style.overflow = 'auto';
         }
 
-            window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+        window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
     </script>
 </body>
 </html>
