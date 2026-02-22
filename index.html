@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- SEO Основне -->
-    <title>Лікування алкогольної залежності | Лікар-нарколог Дмитро Циганков</title>
-    <meta name="description" content="Анонімне лікування алкогольної залежності в Україні. Гіпнотерапія, акупунктура, ТЕС-терапія від лікаря Дмитра Циганкова. Професійна допомога та конфіденційність." />
-    <meta name="keywords" content="лікування алкоголізму, нарколог Україна, Дмитро Циганков, гіпноз від алкоголю, ТЕС-терапія, акупунктура, кодування, анонімна допомога" />
+    <!-- SEO Оптимізація з акцентом на Львів та Україну -->
+    <title>Лікування алкоголізму Львів та Україна | Нарколог Дмитро Циганков</title>
+    <meta name="description" content="Анонімне лікування алкогольної залежності у Львові та допомога по всій Україні. Гіпнотерапія, акупунктура, ТЕС-терапія від лікаря Дмитра Циганкова. Конфіденційно." />
+    <meta name="keywords" content="лікування алкоголізму львів, нарколог львів, лікування алкоголізму україна, Дмитро Циганков, гіпноз від алкоголю львів, кодування львів, анонімна допомога" />
     <link rel="canonical" href="https://narcologist.github.io/" />
 
     <!-- Open Graph (для соцмереж) -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Лікування алкогольної залежності | Лікар Дмитро Циганков" />
-    <meta property="og:description" content="Анонімне лікування алкогольної залежності. Гіпнотерапія, акупунктура, ТЕС-терапія." />
+    <meta property="og:title" content="Лікування алкоголізму Львів та Україна | Лікар Дмитро Циганков" />
+    <meta property="og:description" content="Анонімне лікування алкогольної залежності у Львові. Професійна допомога лікаря-нарколога." />
     <meta property="og:url" content="https://narcologist.github.io/" />
     <meta property="og:image" content="Tsyhankov_Dmytro.jpg" />
 
@@ -23,19 +23,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Мікророзмітка Schema.org для Google -->
+    <!-- Розширена мікророзмітка Schema.org для локального SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Лікар-нарколог Дмитро Циганков",
-      "description": "Анонімне лікування алкогольної залежності методами гіпнотерапії, акупунктури та ТЕС-терапії.",
+      "description": "Анонімне лікування алкогольної залежності у Львові та Україні методами гіпнотерапії, акупунктури та ТЕС-терапії.",
       "telephone": "+380676704004",
-      "url": "https://your-domain.com.ua",
+      "url": "https://narcologist.github.io/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Львів",
+        "addressRegion": "Львівська область",
+        "addressCountry": "UA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "49.8397",
+        "longitude": "24.0297"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Львів" },
+        { "@type": "Country", "name": "Україна" }
+      ],
       "medicalSpecialty": "Narcology",
       "availableService": [
-        { "@type": "MedicalProcedure", "name": "Гіпнотерапія" },
-        { "@type": "MedicalProcedure", "name": "Акупунктура" },
+        { "@type": "MedicalProcedure", "name": "Гіпнотерапія алкоголізму" },
+        { "@type": "MedicalProcedure", "name": "Акупунктура (голкотерапія)" },
         { "@type": "MedicalProcedure", "name": "ТЕС-терапія" }
       ]
     }
@@ -59,262 +74,77 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background: var(--white); 
-            color: var(--text-main); 
-            line-height: 1.6; 
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
+        body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
         h1, h2, h3 { line-height: 1.2; font-weight: 700; }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
         /* Hero */
-        header { 
-            background: radial-gradient(circle at top right, #eff6ff 0%, #ffffff 100%); 
-            padding: 5rem 0 4rem; 
-            text-align: center; 
-        }
+        header { background: radial-gradient(circle at top right, #eff6ff 0%, #ffffff 100%); padding: 5rem 0 4rem; text-align: center; }
+        .location-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: #dbeafe; color: var(--primary); padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .hero-content h1 { font-size: clamp(2rem, 6vw, 3.5rem); color: var(--primary); margin-bottom: 1.5rem; letter-spacing: -0.02em; }
+        .hero-description { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; }
 
-        .hero-content h1 { 
-            font-size: clamp(2rem, 6vw, 3.5rem); 
-            color: var(--primary); 
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .hero-description {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-
-        .quote-box {
-            position: relative;
-            background: #fff;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            max-width: 600px;
-            margin: 3rem auto 0;
-            border-left: 4px solid var(--primary);
-        }
-
-        .quote-text {
-            font-style: italic;
-            font-size: 1.2rem;
-            color: var(--text-main);
-        }
+        .quote-box { position: relative; background: #fff; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow); max-width: 600px; margin: 3rem auto 0; border-left: 4px solid var(--primary); }
+        .quote-text { font-style: italic; font-size: 1.2rem; color: var(--text-main); }
 
         /* Socials */
-        .social-group { 
-            display: flex; 
-            gap: 0.75rem; 
-            justify-content: center; 
-            margin-top: 2rem; 
-            flex-wrap: wrap; 
-        }
-
-        .btn-social { 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 0.6rem; 
-            padding: 0.8rem 1.4rem; 
-            border-radius: 12px; 
-            text-decoration: none; 
-            font-weight: 600; 
-            color: white; 
-            transition: all 0.3s ease; 
-            font-size: 0.95rem; 
-        }
-
+        .social-group { display: flex; gap: 0.75rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+        .btn-social { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.8rem 1.4rem; border-radius: 12px; text-decoration: none; font-weight: 600; color: white; transition: all 0.3s ease; font-size: 0.95rem; }
         .btn-tg { background: var(--telegram); }
         .btn-fb { background: var(--facebook); }
         .btn-viber { background: var(--viber); }
+        .btn-social:hover { filter: brightness(1.1); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-        .btn-social:hover { 
-            filter: brightness(1.1);
-            transform: translateY(-3px); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        /* Doctor */
+        /* Sections */
         section { padding: 5rem 0; }
         .section-header { margin-bottom: 3rem; text-align: center; }
         .section-title { font-size: clamp(1.75rem, 5vw, 2.5rem); color: var(--primary); margin-bottom: 1rem; }
 
-        .doctor-grid {
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 3rem;
-            align-items: center;
-            background: var(--bg-light);
-            padding: 3rem;
-            border-radius: 32px;
-        }
-
-        .doctor-photo {
-            width: 100%;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            background: #e2e8f0;
-            aspect-ratio: 4/5;
-        }
-
+        .doctor-grid { display: grid; grid-template-columns: 350px 1fr; gap: 3rem; align-items: center; background: var(--bg-light); padding: 3rem; border-radius: 32px; }
+        .doctor-photo { width: 100%; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); background: #e2e8f0; aspect-ratio: 4/5; }
         .doctor-photo img { width: 100%; height: 100%; object-fit: cover; }
 
         /* Certificates */
-        .certs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .cert-card {
-            background: white;
-            padding: 1rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            border: 1px solid #e2e8f0;
-            cursor: pointer;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        
+        .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .cert-card { background: white; padding: 1rem; border-radius: 20px; box-shadow: var(--shadow); text-align: center; border: 1px solid #e2e8f0; cursor: pointer; transition: transform 0.3s ease, border-color 0.3s ease; }
         .cert-card:hover { transform: translateY(-5px); border-color: var(--primary); }
-
-        .cert-image-box {
-            width: 100%;
-            aspect-ratio: 4/3;
-            background: #f1f5f9;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-
+        .cert-image-box { width: 100%; aspect-ratio: 4/3; background: #f1f5f9; border-radius: 12px; margin-bottom: 1rem; overflow: hidden; }
         .cert-image-box img { width: 100%; height: 100%; object-fit: contain; padding: 5px; }
 
         /* Methods */
-        .methods-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-        }
-
-        @media (max-width: 500px) {
-            .methods-grid { grid-template-columns: 1fr; }
-        }
-
-        .method-card {
-            background: white;
-            border: 1px solid #e2e8f0;
-            padding: 2.5rem;
-            border-radius: 24px;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
+        .methods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; }
+        @media (max-width: 500px) { .methods-grid { grid-template-columns: 1fr; } }
+        .method-card { background: white; border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 24px; transition: all 0.3s ease; display: flex; flex-direction: column; }
         .method-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
-
         .method-icon-container { margin-bottom: 1.5rem; color: var(--primary); }
-
-        .acupuncture-icon {
-            display: flex;
-            gap: 4px;
-            align-items: flex-end;
-            height: 40px;
-            padding-bottom: 4px;
-        }
-
-        .method-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .method-details.active {
-            max-height: 1000px;
-            margin-top: 1rem;
-            border-top: 1px solid #f1f5f9;
-            padding-top: 1rem;
-        }
-
-        .btn-more {
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            margin-top: 1.5rem;
-            padding: 5px 0;
-            font-size: 1rem;
-            width: fit-content;
-        }
-
+        .acupuncture-icon { display: flex; gap: 4px; align-items: flex-end; height: 40px; padding-bottom: 4px; }
+        .method-details { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); font-size: 0.95rem; color: var(--text-muted); }
+        .method-details.active { max-height: 1000px; margin-top: 1rem; border-top: 1px solid #f1f5f9; padding-top: 1rem; }
+        .btn-more { background: none; border: none; color: var(--primary); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; margin-top: 1.5rem; padding: 5px 0; font-size: 1rem; width: fit-content; }
         .btn-more svg { transition: transform 0.3s ease; }
         .btn-more.active svg { transform: rotate(180deg); }
 
         /* Test */
-        .test-container {
-            background: #fff5f5;
-            border: 2px solid #fee2e2;
-            border-radius: 32px;
-            padding: 3rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
+        .test-container { background: #fff5f5; border: 2px solid #fee2e2; border-radius: 32px; padding: 3rem; max-width: 800px; margin: 0 auto; }
         .test-question { font-size: 1.25rem; font-weight: 700; margin-bottom: 2rem; text-align: center; color: var(--danger); }
         .test-options { display: flex; flex-direction: column; gap: 1rem; }
-        .test-btn {
-            background: white; border: 2px solid #fecaca; padding: 1.2rem 1.5rem; border-radius: 16px;
-            cursor: pointer; font-weight: 600; transition: all 0.2s; text-align: left;
-        }
+        .test-btn { background: white; border: 2px solid #fecaca; padding: 1.2rem 1.5rem; border-radius: 16px; cursor: pointer; font-weight: 600; transition: all 0.2s; text-align: left; }
         .test-btn:hover { border-color: var(--danger); background: #fef2f2; transform: translateX(5px); }
-
         .test-result { display: none; text-align: center; animation: fadeIn 0.5s ease; }
-
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         /* Modal */
-        .modal-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.9); display: none; justify-content: center;
-            align-items: center; z-index: 2000; padding: 20px; backdrop-filter: blur(8px);
-        }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.9); display: none; justify-content: center; align-items: center; z-index: 2000; padding: 20px; backdrop-filter: blur(8px); }
         .modal-content { max-width: 1000px; position: relative; }
         .modal-content img { max-width: 100%; max-height: 80vh; border-radius: 8px; }
-        .modal-close {
-            position: absolute; top: -50px; right: 0; color: white; background: none;
-            border: 1px solid white; padding: 8px 16px; border-radius: 20px; cursor: pointer;
-        }
+        .modal-close { position: absolute; top: -50px; right: 0; color: white; background: none; border: 1px solid white; padding: 8px 16px; border-radius: 20px; cursor: pointer; }
 
         footer { background: #0f172a; color: #94a3b8; padding: 5rem 0 3rem; text-align: center; }
         .footer-logo { color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; display: block; }
         .footer-nav { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
         .footer-nav a { color: #94a3b8; text-decoration: none; }
 
-        @media (max-width: 968px) {
-            .doctor-grid { grid-template-columns: 1fr; text-align: center; }
-            .doctor-photo { max-width: 300px; margin: 0 auto; }
-        }
+        @media (max-width: 968px) { .doctor-grid { grid-template-columns: 1fr; text-align: center; } .doctor-photo { max-width: 300px; margin: 0 auto; } }
     </style>
 </head>
 <body>
@@ -322,15 +152,18 @@
     <div id="certModal" class="modal-overlay" onclick="closeModal()">
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closeModal()">Закрити</button>
-            <img id="modalImage" src="" alt="Сертифікат лікаря Циганкова">
+            <img id="modalImage" src="" alt="Сертифікат лікаря-нарколога Дмитра Циганкова">
         </div>
     </div>
 
     <header>
         <div class="container hero-content">
-            <i data-lucide="shield-check" size="48" color="#2563eb" style="margin-bottom: 1.5rem;"></i>
+            <!-- SEO: Локаційна мітка -->
+            <div class="location-badge">
+                <i data-lucide="map-pin" size="18"></i> м. Львів | Допомога по всій Україні
+            </div>
             <h1>Анонімне лікування алкогольної залежності</h1>
-            <p class="hero-description">Професійна допомога від лікаря-нарколога. Поверніть контроль над власним життям.</p>
+            <p class="hero-description">Професійна допомога від лікаря-нарколога у Львові та дистанційні консультації для пацієнтів з усієї України.</p>
             
             <div class="social-group">
                 <a href="https://t.me/dv_doctor" target="_blank" class="btn-social btn-tg" rel="noopener noreferrer"><i data-lucide="send"></i> Telegram</a>
@@ -349,44 +182,45 @@
             <div class="container">
                 <div class="doctor-grid">
                     <article class="doctor-photo">
-                        <img src="Tsyhankov_Dmytro.jpg" alt="Лікар-нарколог Дмитро Циганков" onerror="this.src='https://via.placeholder.com/400x500?text=Дмитро+Циганков'">
+                        <img src="Tsyhankov_Dmytro.jpg" alt="Лікар-нарколог Дмитро Циганков Львів Україна" onerror="this.src='https://via.placeholder.com/400x500?text=Дмитро+Циганков'">
                     </article>
                     <article class="doctor-bio">
-                        <h2 class="section-title">Ваш лікар</h2>
+                        <h2 class="section-title">Ваш лікар у Львові</h2>
                         <p style="font-size: 1.15rem; margin-bottom: 1.5rem;"><strong>Дмитро Циганков</strong> — сертифікований лікар-нарколог, гіпнотерапевт та психотерапевт.</p>
-                        <p>Мій підхід поєднує медичну точність та глибоке розуміння психології. Я допомагаю знайти нові джерела радості у тверезому житті.</p>
+                        <p>Мій підхід поєднує медичну точність та глибоке розуміння психології. Проводжу прийом у м. Львів, а також допомагаю пацієнтам з усіх міст України почати шлях до тверезості.</p>
                     </article>
                 </div>
 
                 <div class="certs-grid">
                     <div class="cert-card" onclick="openCertModal(this)">
-                        <div class="cert-image-box"><img src="omni.jpg" alt="Сертифікат Гіпнотерапевта OMNI (Швейцарія)" onerror="this.src='https://via.placeholder.com/600x450?text=OMNI'"></div>
+                        <div class="cert-image-box"><img src="omni.jpg" alt="Сертифікат Гіпнотерапевта OMNI (Швейцарія) - Лікар Циганков" onerror="this.src='https://via.placeholder.com/600x450?text=OMNI'"></div>
                         <h3 class="cert-label" style="font-size: 1rem; font-weight: 500;">Сертифікат Гіпнотерапевта OMNI (Швейцарія)</h3>
                     </div>
                     <div class="cert-card" onclick="openCertModal(this)">
-                        <div class="cert-image-box"><img src="psychoterapist.jpg" alt="Сертифікат Психотерапевта" onerror="this.src='https://via.placeholder.com/600x450?text=Психотерапія'"></div>
+                        <div class="cert-image-box"><img src="psychoterapist.jpg" alt="Диплом Психотерапевта - Дмитро Циганков" onerror="this.src='https://via.placeholder.com/600x450?text=Психотерапія'"></div>
                         <h3 class="cert-label" style="font-size: 1rem; font-weight: 500;">Сертифікат Психотерапевта</h3>
                     </div>
                     <div class="cert-card" onclick="openCertModal(this)">
-                        <div class="cert-image-box"><img src="acupuncture_ukr.jpg" alt="Сертифікат з Акупунктури" onerror="this.src='https://via.placeholder.com/600x450?text=Акупунктура'"></div>
+                        <div class="cert-image-box"><img src="acupuncture_ukr.jpg" alt="Сертифікат з Акупунктури (Голкотерапія)" onerror="this.src='https://via.placeholder.com/600x450?text=Акупунктура'"></div>
                         <h3 class="cert-label" style="font-size: 1rem; font-weight: 500;">Сертифікат з Акупунктури</h3>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="methods">
+        <section id="methods" style="background: var(--bg-light);">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Методи лікування алкогольної залежності</h2>
+                    <p>Професійні медичні підходи, адаптовані під індивідуальні потреби пацієнта.</p>
                 </div>
 
                 <div class="methods-grid">
                     <!-- Гіпноз -->
                     <article class="method-card">
                         <div class="method-icon-container"><i data-lucide="brain" size="40"></i></div>
-                        <h3>Гіпноз (гіпнотерапія)</h3>
-                        <p>Використання глибинних станів розслаблення для корекції залежної поведінки.</p>
+                        <h3>Гіпноз (гіпнотерапія) у Львові</h3>
+                        <p>Використання глибинних станів розслаблення для корекції залежної поведінки за швейцарськими стандартами.</p>
                         <div class="method-details" id="detail-hypno">
                             <p>Ефективний метод позбавлення від алкогольної залежності, який полягає у формуванні у пацієнта відрази до алкоголю та глибокого внутрішнього переконання про шкідливість вживання алкогольних напоїв на підсвідомому рівні. Під час сеансу гіпнотерапії в підсвідомості пацієнта, який перебуває в стані максимального фізичного та ментального розслаблення, фіксуються певні навіювання про шкоду, яку приносить алкоголь. В подальшому ці навіювання забезпечують негативне ставлення пацієнта до алкоголю і, як наслідок, позбавлення алкогольної залежності. Лікар-нарколог Циганков Дмитро є сертифікованим гіпнотерапевтом OMNI HYPNOSIS (Швейцарія) і успішно використовує гіпнотерапію для лікування алкоголізму. Десятки пацієнтів вирішили свою проблему саме завдяки цьому ефективному, безболісному методу.</p>
                         </div>
@@ -407,8 +241,8 @@
                                 <rect x="28" y="8" width="4" height="10" rx="1" fill="currentColor" stroke="none" />
                             </svg>
                         </div>
-                        <h3>Акупунктура вушної раковини (голкотерапія)</h3>
-                        <p>Традиційний метод рефлексотерапії за протоколом ACU-DETOX.</p>
+                        <h3>Акупунктура вушної раковини</h3>
+                        <p>Традиційний метод рефлексотерапії за протоколом ACU-DETOX для зняття тяги до алкоголю.</p>
                         <div class="method-details" id="detail-acu">
                             <p>Голковколювання активних точок на тілі людини використовується з лікувальною метою з давніх давен. Цей ефективний перевірений метод дозволив багатьом пацієнтам повернутися до тверезого життя вже за 5 сеансів. Лікування відбувається згідно затверджених протоколів.Протокол акупунктури ACU- DETOX  використовується для усунення таких симптомів відміни алкоголю як тяга, тривожність, поганий сон, агресія, депресивні стани. Під час голковколювання виробляються ендорфіни, які допомагають знизити рівень стресу та  тривоги. Лікар Циганков Дмитро за допомогою голкотерапії допомагає пацієнтам позбутися також і нікотинової залежності. Всесвітня організація охорони здоров’я (ВООЗ) визнає акупунктуру ефективним засобом лікування багатьох захворювань, узалежнень в тому числі (2008).</p>
                         </div>
@@ -420,15 +254,10 @@
                     <!-- ТЕС -->
                     <article class="method-card">
                         <div class="method-icon-container"><i data-lucide="zap" size="40"></i></div>
-                        <h3>ТЕС-терапія</h3>
-                        <p>Електростимуляція захисних механізмів мозку.</p>
+                        <h3>ТЕС-терапія (Електростимуляція)</h3>
+                        <p>Апаратний метод відновлення вольових функцій мозку та нормалізації психоемоційного стану.</p>
                         <div class="method-details" id="detail-tes">
-                            <p>Префронтальна кора головного мозку відповідає за вольове напруження (сила волі), увагу і мотивацію. Внаслідок зловживання алкоголем у пацієнтів відбувається ураження префронтальної кори і,як наслідок, спостерігається втрата інтересу до оточуючого середовища.Пацієнти також можуть бути менш уважними, ніж зазвичай. Пошкодження цієї ділянки в людини також призводить до відсутності мотивації робити щось для себе та/або для інших.Подразнення префронтальної кори головного мозку слабким електричним струмом за допомогою спеціального апарату дозволяє ефективно лікувати симптоми,що супроводжують алкогольну залежність-депресивні та тривожні стани, порушення сну.В результаті використання даного методу спостерігається:
-                               - зниження тяги до алкоголю
-                               - покращення настрою та підвищення якості життя
-                               - нормалізація сну та зниження втомлюваності
-                               - нормалізація тонусу кровоносних судин і показників артеріального тиску
-                               - посилення активності імунної системи</p>
+                            <p>Префронтальна кора головного мозку відповідає за вольове напруження (сила волі), увагу і мотивацію. Внаслідок зловживання алкоголем у пацієнтів відбувається ураження префронтальної кори і,як наслідок, спостерігається втрата інтересу до оточуючого середовища.Пацієнти також можуть бути менш уважними, ніж зазвичай. Пошкодження цієї ділянки в людини також призводить до відсутності мотивації робити щось для себе та/або для інших.Подразнення префронтальної кори головного мозку слабким електричним струмом за допомогою спеціального апарату дозволяє ефективно лікувати симптоми,що супроводжують алкогольну залежність-депресивні та тривожні стани, порушення сну.В результаті використання даного методу спостерігається зниження тяги до алкоголю, покращення настрою та підвищення якості життя, нормалізація сну та зниження втомлюваності, нормалізація тонусу кровоносних судин і показників артеріального тиску, посилення активності імунної системи</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('tes')" aria-expanded="false">
                             <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
@@ -438,8 +267,8 @@
                     <!-- Психотерапія -->
                     <article class="method-card">
                         <div class="method-icon-container"><i data-lucide="heart" size="40"></i></div>
-                        <h3>Індивідуальна психотерапія</h3>
-                        <p>Робота з причинами, а не лише з наслідками залежності.</p>
+                        <h3>Психотерапія у м. Львів</h3>
+                        <p>Глибока індивідуальна робота з психологічними причинами залежності в анонімному форматі.</p>
                         <div class="method-details" id="detail-psy">
                             <p>Дозволяє розібратися в глибинних причинах виникнення та формування алкогольної залежності та знаходити шляхи вирішення цієї проблеми індивідуально для кожного пацієнта.</p>
                         </div>
@@ -454,8 +283,8 @@
         <section id="test">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Експрес-тест на алкогольну залежність</h2>
-                    <p>Відверті відповіді допоможуть вам зрозуміти стан проблеми.</p>
+                    <h2 class="section-title">Тест на залежність (Львів/Україна)</h2>
+                    <p>Пройдіть коротку анонімну перевірку свого стану прямо зараз.</p>
                 </div>
                 
                 <div class="test-container" id="quiz-box">
@@ -468,7 +297,7 @@
                         <i data-lucide="alert-triangle" size="56" color="#dc2626" style="margin-bottom: 1.5rem;"></i>
                         <h3 id="result-title" style="margin-bottom: 1rem; color: var(--danger);">Результат аналізу</h3>
                         <p id="result-text" style="margin-bottom: 2rem;"></p>
-                        <a href="https://t.me/dv_doctor" class="btn-social btn-tg">Записатися на консультацію</a>
+                        <a href="https://t.me/dv_doctor" class="btn-social btn-tg">Отримати допомогу лікаря</a>
                     </div>
                 </div>
             </div>
@@ -478,6 +307,7 @@
     <footer>
         <div class="container">
             <span class="footer-logo">Лікар Дмитро Циганков</span>
+            <p style="margin-bottom: 1.5rem;">Анонімна допомога при алкогольній залежності у Львові та по всій Україні.</p>
             <nav class="footer-nav">
                 <a href="#doctor">Про лікаря</a>
                 <a href="#methods">Методи</a>
@@ -486,19 +316,19 @@
                 <a href="viber://chat?number=%2B380676704004"><i data-lucide="message-circle" size="18"></i> Viber</a>
                 <a href="https://facebook.com/dtsyhankov" rel="noopener noreferrer"><i data-lucide="facebook" size="18"></i> Facebook</a>
             </nav>
-            <p>&copy; 2024-2026 Лікар Дмитро Циганков. Конфіденційна допомога при алкогольній залежності.</p>
+            <p style="font-size: 0.85rem;">&copy; 2024-2026 Лікар-нарколог Дмитро Циганков. Лікування алкоголізму Львів та Україна. Конфіденційно.</p>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
 
-        // Тест
+        // Тест логіка
         const questions = [
             "Чи відчуваєте ви непереборне бажання випити у стресових ситуаціях?",
             "Чи траплялося, що ви не могли згадати події вечора після вживання алкоголю?",
             "Чи намагалися ви самостійно обмежити вживання, але зривалися через кілька днів?",
-            "Чи зауважували близькі люди, що ваша поведінка змінюється не на краще після чарки?"
+            "Чи зауважували близькі люди, що ваша поведінка змінюється після чарки?"
         ];
         let currentQuestion = 0;
         let score = 0;
@@ -526,16 +356,17 @@
             const res = document.getElementById('quiz-result');
             res.style.display = 'block';
             const txt = document.getElementById('result-text');
-            txt.innerText = score >= 2 ? "Ваші відповіді вказують на можливу залежність. Рекомендуємо звернутися за професійною консультацією." : "Критичних ознак залежності зараз не виявлено, але будьте уважні до свого здоров'я.";
+            txt.innerText = score >= 2 
+                ? "Ваші відповіді вказують на високу ймовірність залежності. Рекомендуємо звернутися за анонімною консультацією у Львові або онлайн." 
+                : "Критичних ознак залежності зараз не виявлено, проте рекомендуємо уважно ставитися до свого здоров'я.";
         }
         loadQuestion();
 
-        // Деталі методів
+        // Функціонал розгортання деталей
         function toggleDetail(id) {
             const detail = document.getElementById('detail-' + id);
             const button = detail.closest('.method-card').querySelector('.btn-more');
             const span = button.querySelector('span');
-            
             const isActive = detail.classList.toggle('active');
             button.classList.toggle('active');
             button.setAttribute('aria-expanded', isActive);
