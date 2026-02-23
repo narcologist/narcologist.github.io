@@ -66,7 +66,7 @@
       "medicalSpecialty": "Narcology",
       "availableService": [
         { "@type": "MedicalProcedure", "name": "Детоксикація" },
-        { "@type": "MedicalProcedure", "name": "Укол або підшивка від алкоголізму"
+        { "@type": "MedicalProcedure", "name": "Укол або підшивка від алкоголізму" },
         { "@type": "MedicalProcedure", "name": "Гіпноз (гіпнотерапія)" },
         { "@type": "MedicalProcedure", "name": "Акупунктура (голкотерапія)" },
         { "@type": "MedicalProcedure", "name": "ТЕС-терапія" },
@@ -156,6 +156,14 @@
         .test-result { display: none; text-align: center; animation: fadeIn 0.5s ease; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+        /* Contacts & Location */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; align-items: center; background: white; padding: 3rem; border-radius: 32px; box-shadow: var(--shadow); border: 1px solid #e2e8f0; }
+        .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+        .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+        .contact-item-icon { color: var(--primary); background: #eff6ff; padding: 0.75rem; border-radius: 12px; }
+        .map-container { width: 100%; border-radius: 24px; overflow: hidden; aspect-ratio: 16/9; box-shadow: var(--shadow); background: #e2e8f0; }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
+
         /* Modal */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.9); display: none; justify-content: center; align-items: center; z-index: 2000; padding: 20px; backdrop-filter: blur(8px); }
         .modal-content { max-width: 1000px; position: relative; }
@@ -170,6 +178,7 @@
         @media (max-width: 968px) { 
             .doctor-grid { grid-template-columns: 1fr; text-align: center; } 
             .doctor-photo-wrapper { max-width: 300px; margin: 0 auto; } 
+            .contact-grid { grid-template-columns: 1fr; padding: 2rem; }
         }
     </style>
 </head>
@@ -356,6 +365,40 @@
                         <h3 id="result-title" style="margin-bottom: 1rem; color: var(--danger);">Результат аналізу</h3>
                         <p id="result-text" style="margin-bottom: 2rem;"></p>
                         <a href="https://t.me/dv_doctor" class="btn-social btn-tg">Отримати допомогу лікаря</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Нова секція Контакти та Карта -->
+        <section id="contacts" style="background: var(--bg-light);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Контакти та розташування</h2>
+                    <p>Прийом проводиться за попереднім записом у сучасній клініці у м. Львів.</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i data-lucide="map-pin" size="24"></i></div>
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Адреса клініки:</h3>
+                                <p style="color: var(--text-muted);"><strong>Medical Home Clinic +</strong><br>проспект В'ячеслава Чорновола, 55<br>м. Львів, 79000</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i data-lucide="clock" size="24"></i></div>
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Графік прийому:</h3>
+                                <p style="color: var(--text-muted);">За попереднім записом</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <!-- Інтерактивна карта Google Maps -->
+                        <iframe src="https://maps.google.com/maps?q=Medical%20Home%20Clinic%20%2B,%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%92'%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2%D0%B0%20%D0%A7%D0%BE%D1%80%D0%BD%D0%BE%D0%B2%D0%BE%D0%BB%D0%B0,%2055,%20%D0%9B%D1%8C%D0%B2%D1%96%D0%B2&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
