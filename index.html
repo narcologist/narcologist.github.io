@@ -65,9 +65,12 @@
       ],
       "medicalSpecialty": "Narcology",
       "availableService": [
-        { "@type": "MedicalProcedure", "name": "Гіпнотерапія алкоголізму" },
+        { "@type": "MedicalProcedure", "name": "Детоксикація" },
+        { "@type": "MedicalProcedure", "name": "Укол або підшивка від алкоголізму"
+        { "@type": "MedicalProcedure", "name": "Гіпноз (гіпнотерапія)" },
         { "@type": "MedicalProcedure", "name": "Акупунктура (голкотерапія)" },
-        { "@type": "MedicalProcedure", "name": "ТЕС-терапія" }
+        { "@type": "MedicalProcedure", "name": "ТЕС-терапія" },
+        { "@type": "MedicalProcedure", "name": "Психотерапія " }
       ]
     }
     </script>
@@ -121,7 +124,7 @@
         .doctor-photo { width: 100%; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); background: #e2e8f0; aspect-ratio: 4/5; }
         .doctor-photo img { width: 100%; height: 100%; object-fit: cover; }
         
-        /* New: Button over doctor photo area */
+        /* Button over doctor photo area */
         .doctor-fb-float { margin-top: 1.5rem; display: flex; justify-content: center; }
 
         /* Certificates */
@@ -132,15 +135,15 @@
         .cert-image-box img { width: 100%; height: 100%; object-fit: contain; padding: 5px; }
 
         /* Methods */
-        .methods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; }
+        .methods-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
         @media (max-width: 500px) { .methods-grid { grid-template-columns: 1fr; } }
-        .method-card { background: white; border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 24px; transition: all 0.3s ease; display: flex; flex-direction: column; }
+        .method-card { background: white; border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 24px; transition: all 0.3s ease; display: flex; flex-direction: column; height: 100%; }
         .method-card:hover { border-color: var(--primary); box-shadow: var(--shadow); }
         .method-icon-container { margin-bottom: 1.5rem; color: var(--primary); }
         .acupuncture-icon { display: flex; gap: 4px; align-items: flex-end; height: 40px; padding-bottom: 4px; }
         .method-details { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); font-size: 0.95rem; color: var(--text-muted); }
         .method-details.active { max-height: 1000px; margin-top: 1rem; border-top: 1px solid #f1f5f9; padding-top: 1rem; }
-        .btn-more { background: none; border: none; color: var(--primary); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; margin-top: 1.5rem; padding: 5px 0; font-size: 1rem; width: fit-content; }
+        .btn-more { background: none; border: none; color: var(--primary); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; margin-top: auto; padding: 15px 0 5px; font-size: 1rem; width: fit-content; }
         .btn-more svg { transition: transform 0.3s ease; }
         .btn-more.active svg { transform: rotate(180deg); }
 
@@ -175,7 +178,7 @@
     <div id="certModal" class="modal-overlay" onclick="closeModal()">
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closeModal()">Закрити</button>
-            <img id="modalImage" src="" alt="Сертифікат лікаря-нарколога Дмитра Циганкова">
+            <img id="modalImage" src="" alt="Сертифікат лікаря-нарколога Дмитра Циганков">
         </div>
     </div>
 
@@ -207,7 +210,6 @@
                         <article class="doctor-photo">
                             <img src="Tsyhankov_Dmytro.jpg" alt="Лікар-нарколог Дмитро Циганков Львів Україна" onerror="this.src='https://via.placeholder.com/400x500?text=Дмитро+Циганков'">
                         </article>
-                        <!-- Кнопка Facebook під фото -->
                         <div class="doctor-fb-float">
                             <a href="https://facebook.com/dtsyhankov" target="_blank" class="btn-social btn-fb" rel="noopener noreferrer">
                                 <i data-lucide="facebook"></i> Профіль Facebook
@@ -246,18 +248,46 @@
                 </div>
 
                 <div class="methods-grid">
+                    <!-- Детоксикація -->
+                    <article class="method-card">
+                        <div class="method-icon-container"><i data-lucide="droplet" size="40"></i></div>
+                        <h3>Детоксикація</h3>
+                        <p> Виведення з запою</p>
+                        <div class="method-details" id="detail-detox">
+                            <p>Повне очищення організму від продуктів розпаду алкоголю, в комфортних умовах стаціонару, анонімно. Цілодобове медичне спостереження та харчування. Рекомендований курс від 3-ч діб (для найбільшої ефективності). Можлива амбулаторна допомога (прийшов > прокапався > пішов)</p>
+                        </div>
+                        <button class="btn-more" onclick="toggleDetail('detox')">
+                            <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
+                        </button>
+                    </article>
+
+                    <!-- Кодування (іконка шприц) -->
+                    <article class="method-card">
+                        <div class="method-icon-container"><i data-lucide="syringe" size="40"></i></div>
+                        <h3>Укол (кодування) або Підшивка від алкоголізму</h3>
+                        <p>Медикаментозний захист від вживання алкоголю шляхом введення препаратів тривалої дії.</p>
+                        <div class="method-details" id="detail-coding">
+                            <p>Укол від алкоголізму (кодування) - це внутрішньо-м'язеве введення препарату. Висока ефективність. Можливий при утримання від вживання алкоголю не менше як 3 доби. Підшивка від алкоголізму - це введення лікарського засобу методом малоінвазивної хірургічної процедури (невеличкий розріз під лопаткою > ввели імплант > зашили).Обов'язкова умова не вживати алкоголь 3 доби до процедури. Використовуються виключно сертифіковані препарати виробництва США</p>
+                        </div>
+                        <button class="btn-more" onclick="toggleDetail('coding')">
+                            <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
+                        </button>
+                    </article>
+
+                    <!-- Гіпноз -->
                     <article class="method-card">
                         <div class="method-icon-container"><i data-lucide="brain" size="40"></i></div>
                         <h3>Гіпноз (гіпнотерапія) у Львові</h3>
                         <p>Використання глибинних станів розслаблення для корекції залежної поведінки за швейцарськими стандартами.</p>
                         <div class="method-details" id="detail-hypno">
-                            <p>Ефективний метод позбавлення від алкогольної залежності, який полягає у формуванні у пацієнта відрази до алкоголю та глибокого внутрішнього переконання про шкідливість вживання алкогольних напоїв на підсвідомому рівні. Під час сеансу гіпнотерапії в підсвідомості пацієнта, який перебуває в стані максимального фізичного та ментального розслаблення, фіксуються певні навіювання про шкоду, яку приносить алкоголь. В подальшому ці навіювання забезпечують негативне ставлення пацієнта до алкоголю і, як наслідок, позбавлення алкогольної залежності. Лікар-нарколог Циганков Дмитро є сертифікованим гіпнотерапевтом OMNI HYPNOSIS (Швейцарія) і успішно використовує гіпнотерапію для лікування алкоголізму. Десятки пацієнтів вирішили свою проблему саме завдяки цьому ефективному, безболісному методу.</p>
+                            <p>Ефективний метод позбавлення від алкогольної залежності, який полягає у формуванні у пацієнта відрази до алкоголю та глибокого внутрішнього переконання про шкідливість вживання алкогольних напоїв на підсвідомому рівні. Під час сеансу гіпнотерапії в підсвідомості пацієнта, який перебуває в стані максимального фізичного та ментального розслаблення, фіксуються певні навіювання про шкоду, яку приносить алкоголь. В подальшому ці навіювання забезпечують негативне ставлення пацієнта до алкоголю і, як наслідок, позбавлення алкогольної залежності. Лікар-нарколог Циганков Дмитро є сертифікованим гіпнотерапевтом OMNI HYPNOSIS (Швейцарія) і успішно використовує гіпнотерапію для лікування алкоголізму.</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('hypno')" aria-expanded="false">
                             <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
                         </button>
                     </article>
 
+                    <!-- Акупунктура -->
                     <article class="method-card">
                         <div class="method-icon-container">
                             <svg class="acupuncture-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -272,25 +302,27 @@
                         <h3>Акупунктура вушної раковини</h3>
                         <p>Традиційний метод рефлексотерапії за протоколом ACU-DETOX для зняття тяги до алкоголю.</p>
                         <div class="method-details" id="detail-acu">
-                            <p>Голковколювання активних точок на тілі людини використовується з лікувальною метою з давніх давен. Цей ефективний перевірений метод дозволив багатьом пацієнтам повернутися до тверезого життя вже за 5 сеансів. Лікування відбувається згідно затверджених протоколів.Протокол акупунктури ACU- DETOX  використовується для усунення таких симптомів відміни алкоголю як тяга, тривожність, поганий сон, агресія, депресивні стани. Під час голковколювання виробляються ендорфіни, які допомагають знизити рівень стресу та  тривоги. Лікар Циганков Дмитро за допомогою голкотерапії допомагає пацієнтам позбутися також і нікотинової залежності. Всесвітня організація охорони здоров’я (ВООЗ) визнає акупунктуру ефективним засобом лікування багатьох захворювань, узалежнень в тому числі (2008).</p>
+                            <p>Голковколювання активних точок на тілі людини використовується з лікувальною метою з давніх давен. Протокол акупунктури ACU-DETOX використовується для усунення таких симптомів відміни алкоголю як тяга, тривожність, поганий сон, агресія, депресивні стани. Під час голковколювання виробляються ендорфіни, які допомагають знизити рівень стресу.</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('acu')" aria-expanded="false">
                             <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
                         </button>
                     </article>
 
+                    <!-- ТЕС-терапія -->
                     <article class="method-card">
                         <div class="method-icon-container"><i data-lucide="zap" size="40"></i></div>
                         <h3>ТЕС-терапія (Електростимуляція)</h3>
                         <p>Апаратний метод відновлення вольових функцій мозку та нормалізації психоемоційного стану.</p>
                         <div class="method-details" id="detail-tes">
-                            <p>Префронтальна кора головного мозку відповідає за вольове напруження (сила волі), увагу і мотивацію. Внаслідок зловживання алкоголем у пацієнтів відбувається ураження префронтальної кори і,як наслідок, спостерігається втрата інтересу до оточуючого середовища.Пацієнти також можуть бути менш уважними, ніж зазвичай. Пошкодження цієї ділянки в людини також призводить до відсутності мотивації робити щось для себе та/або для інших.Подразнення префронтальної кори головного мозку слабким електричним струмом за допомогою спеціального апарату дозволяє ефективно лікувати симптоми,що супроводжують алкогольну залежність-депресивні та тривожні стани, порушення сну.В результаті використання даного методу спостерігається зниження тяги до алкоголю, покращення настрою та підвищення якості життя, нормалізація сну та зниження втомлюваності, нормалізація тонусу кровоносних судин і показників артеріального тиску, посилення активності імунної системи</p>
+                            <p>Префронтальна кора головного мозку відповідає за вольове напруження (сила волі), увагу і мотивацію. Подразнення префронтальної кори головного мозку слабким електричним струмом за допомогою спеціального апарату дозволяє ефективно лікувати симптоми,що супроводжують алкогольну залежність-депресивні та тривожні стани, порушення сну.</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('tes')" aria-expanded="false">
                             <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
                         </button>
                     </article>
 
+                    <!-- Психотерапія -->
                     <article class="method-card">
                         <div class="method-icon-container"><i data-lucide="heart" size="40"></i></div>
                         <h3>Психотерапія у м. Львів</h3>
@@ -351,6 +383,7 @@
 
         // Тест логіка
         const questions = [
+            "Чи були у Вас раніше спроби кинути пити самостійно?",
             "Чи відчуваєте ви непереборне бажання випити у стресових ситуаціях?",
             "Чи траплялося, що ви не могли згадати події вечора після вживання алкоголю?",
             "Чи намагалися ви самостійно обмежити вживання, але зривалися через кілька днів?",
@@ -382,7 +415,7 @@
             const res = document.getElementById('quiz-result');
             res.style.display = 'block';
             const txt = document.getElementById('result-text');
-            txt.innerText = score >= 2
+            txt.innerText = score >= 1
                 ? "Ваші відповіді вказують на високу ймовірність залежності. Рекомендуємо звернутися за анонімною консультацією у Львові або онлайн."
                 : "Критичних ознак залежності зараз не виявлено, проте рекомендуємо уважно ставитися до свого здоров'я.";
         }
