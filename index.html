@@ -146,6 +146,24 @@
         .btn-more { background: none; border: none; color: var(--primary); font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; margin-top: auto; padding: 15px 0 5px; font-size: 1rem; width: fit-content; }
         .btn-more svg { transition: transform 0.3s ease; }
         .btn-more.active svg { transform: rotate(180deg); }
+        /* Стилізація списку */
+        .method-list {
+          list-style-type: none;
+          padding-left: 0;
+          margin-top: 0.5rem;
+        }
+        .method-list li {
+          position: relative;
+          padding-left: 1.5rem;
+          margin-bottom: 0.4rem;
+        }
+        .method-list li::before {
+          content: "•";
+          color: var(--primary);
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+        }
 
         /* Test */
         .test-container { background: #fff5f5; border: 2px solid #fee2e2; border-radius: 32px; padding: 3rem; max-width: 800px; margin: 0 auto; }
@@ -266,10 +284,9 @@
                             <p>Повне очищення організму від продуктів розпаду алкоголю в комфортних умовах стаціонару. Процедура проводиться абсолютно анонімно.</p>
                             <ul>
                                 <li>Цілодобове медичне спостереження та збалансоване харчування.</li>
-                                <li>Рекомендований курс — від 3-х діб для досягнення максимальної ефективності.</li>
+                                <li>Рекомендований курс - від 3-х діб для досягнення максимальної ефективності.</li>
                                 <li>Можлива амбулаторна допомога (формат: прийшов > отримав процедуру > пішов).</li>
                             </ul>
-                            <p> Можлива амбулаторна допомога (прийшов > прокапався > пішов)</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('detox')">
                             <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
@@ -299,7 +316,7 @@
                         <div class="method-details" id="detail-hypno">
                             <p>Ефективний метод позбавлення від алкогольної залежності, який полягає у формуванні у пацієнта відрази до алкоголю та глибокого внутрішнього переконання про шкідливість вживання алкогольних напоїв на підсвідомому рівні.</p>
                             <p>Під час сеансу гіпнотерапії в підсвідомості пацієнта, який перебуває в стані максимального фізичного та ментального розслаблення, фіксуються певні навіювання про шкоду, яку приносить алкоголь. В подальшому ці навіювання забезпечують негативне ставлення пацієнта до алкоголю і, як наслідок, позбавлення алкогольної залежності.</p>
-                            <p>Лікар Дмитро Циганков є <strong>сертифікованим гіпнотерапевтом OMNI HYPNOSIS (Швейцарія) і успішно використовує гіпнотерапію для лікування алкоголізму та нікотинової залежності.</strong>.</p>
+                            <p>Лікар Дмитро Циганков є <strong>сертифікованим гіпнотерапевтом OMNI HYPNOSIS (Швейцарія) і успішно використовує гіпнотерапію для лікування алкоголізму та нікотинової залежності.</strong></p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('hypno')" aria-expanded="false">
                             <span>Детальніше</span> <i data-lucide="chevron-down" size="20"></i>
@@ -323,7 +340,7 @@
                         <div class="method-details" id="detail-acu">
                             <p></p>Голковколювання активних точок на тілі людини використовується з лікувальною метою з давніх давен.</p>
                             <p>Протокол <strong>ACU-DETOX</strong> використовується для усунення таких симптомів відміни алкоголю як:</p>
-                            <ul>
+                            <ul className="method-list">
                                 <li>патологічна тяги до спиртного,</li>
                                 <li>тривожність, поганий сон,</li>
                                 <li>агресія,</li>
