@@ -28,12 +28,12 @@
     <meta property="og:image" content="Tsyhankov_Dmytro.jpg" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'%3E%3C/path%3E%3Cpath d='m9 12 2 2 4-4'%3E%3C/path%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1-1z'%3E%3C/path%3E%3Cpath d='m9 12 2 2 4-4'%3E%3C/path%3E%3C/svg%3E">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Розширена мікророзмітка Schema.org для локального SEO # geo coordinates Medical Home Clinic -->
+    <!-- Розширена мікророзмітка Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -117,8 +117,12 @@
         .section-title { font-size: clamp(1.75rem, 5vw, 2.5rem); color: var(--primary); margin-bottom: 1rem; }
 
         .doctor-grid { display: grid; grid-template-columns: 350px 1fr; gap: 3rem; align-items: center; background: var(--bg-light); padding: 3rem; border-radius: 32px; }
+        .doctor-photo-wrapper { position: relative; width: 100%; }
         .doctor-photo { width: 100%; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); background: #e2e8f0; aspect-ratio: 4/5; }
         .doctor-photo img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* New: Button over doctor photo area */
+        .doctor-fb-float { margin-top: 1.5rem; display: flex; justify-content: center; }
 
         /* Certificates */
         .certs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
@@ -160,7 +164,10 @@
         .footer-nav { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
         .footer-nav a { color: #94a3b8; text-decoration: none; }
 
-        @media (max-width: 968px) { .doctor-grid { grid-template-columns: 1fr; text-align: center; } .doctor-photo { max-width: 300px; margin: 0 auto; } }
+        @media (max-width: 968px) { 
+            .doctor-grid { grid-template-columns: 1fr; text-align: center; } 
+            .doctor-photo-wrapper { max-width: 300px; margin: 0 auto; } 
+        }
     </style>
 </head>
 <body>
@@ -174,7 +181,6 @@
 
     <header>
         <div class="container hero-content">
-            <!-- SEO: Локаційна мітка -->
             <div class="location-badge">
                 <i data-lucide="map-pin" size="18"></i> м. Львів | Допомога по всій Україні
             </div>
@@ -197,9 +203,17 @@
         <section id="doctor">
             <div class="container">
                 <div class="doctor-grid">
-                    <article class="doctor-photo">
-                        <img src="Tsyhankov_Dmytro.jpg" alt="Лікар-нарколог Дмитро Циганков Львів Україна" onerror="this.src='https://via.placeholder.com/400x500?text=Дмитро+Циганков'">
-                    </article>
+                    <div class="doctor-photo-wrapper">
+                        <article class="doctor-photo">
+                            <img src="Tsyhankov_Dmytro.jpg" alt="Лікар-нарколог Дмитро Циганков Львів Україна" onerror="this.src='https://via.placeholder.com/400x500?text=Дмитро+Циганков'">
+                        </article>
+                        <!-- Кнопка Facebook під фото -->
+                        <div class="doctor-fb-float">
+                            <a href="https://facebook.com/dtsyhankov" target="_blank" class="btn-social btn-fb" rel="noopener noreferrer">
+                                <i data-lucide="facebook"></i> Профіль Facebook
+                            </a>
+                        </div>
+                    </div>
                     <article class="doctor-bio">
                         <h2 class="section-title">Ваш лікар у Львові</h2>
                         <p style="font-size: 1.15rem; margin-bottom: 1.5rem;"><strong>Дмитро Циганков</strong> — сертифікований лікар-нарколог, гіпнотерапевт та психотерапевт.</p>
@@ -232,7 +246,6 @@
                 </div>
 
                 <div class="methods-grid">
-                    <!-- Гіпноз -->
                     <article class="method-card">
                         <div class="method-icon-container"><i data-lucide="brain" size="40"></i></div>
                         <h3>Гіпноз (гіпнотерапія) у Львові</h3>
@@ -245,7 +258,6 @@
                         </button>
                     </article>
 
-                    <!-- Акупунктура -->
                     <article class="method-card">
                         <div class="method-icon-container">
                             <svg class="acupuncture-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -267,7 +279,6 @@
                         </button>
                     </article>
 
-                    <!-- ТЕС -->
                     <article class="method-card">
                         <div class="method-icon-container"><i data-lucide="zap" size="40"></i></div>
                         <h3>ТЕС-терапія (Електростимуляція)</h3>
@@ -280,7 +291,6 @@
                         </button>
                     </article>
 
-                    <!-- Психотерапія -->
                     <article class="method-card">
                         <div class="method-icon-container"><i data-lucide="heart" size="40"></i></div>
                         <h3>Психотерапія у м. Львів</h3>
@@ -372,13 +382,12 @@
             const res = document.getElementById('quiz-result');
             res.style.display = 'block';
             const txt = document.getElementById('result-text');
-            txt.innerText = score >= 2 
-                ? "Ваші відповіді вказують на високу ймовірність залежності. Рекомендуємо звернутися за анонімною консультацією у Львові або онлайн." 
+            txt.innerText = score >= 2
+                ? "Ваші відповіді вказують на високу ймовірність залежності. Рекомендуємо звернутися за анонімною консультацією у Львові або онлайн."
                 : "Критичних ознак залежності зараз не виявлено, проте рекомендуємо уважно ставитися до свого здоров'я.";
         }
         loadQuestion();
 
-        // Функціонал розгортання деталей
         function toggleDetail(id) {
             const detail = document.getElementById('detail-' + id);
             const button = detail.closest('.method-card').querySelector('.btn-more');
@@ -389,7 +398,6 @@
             span.innerText = isActive ? 'Згорнути' : 'Детальніше';
         }
 
-        // Модальне вікно
         function openCertModal(el) {
             const m = document.getElementById('certModal');
             const img = el.querySelector('img');
