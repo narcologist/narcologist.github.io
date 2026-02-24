@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>    
+<head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-X42MRC0YGK"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-X42MRC0YGK', { 'anonymize_ip': true });
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-X42MRC0YGK', { 'anonymize_ip': true });
     </script>
 
     <meta charset="UTF-8" />
@@ -19,7 +19,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    </noscript>
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Лікування алкоголізму Львів та Україна | Лікар Дмитро Циганков" />
@@ -87,9 +91,19 @@
             --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
-        /* Оптимізація шрифтів */
+        /* Оптимізація шрифтів та запобігання CLS */
         * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            background: var(--white); 
+            color: var(--text-main); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeSpeed;
+        }
+
         h1, h2, h3 { line-height: 1.2; font-weight: 700; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
@@ -99,7 +113,17 @@
         .hero-content h1 { font-size: clamp(2rem, 6vw, 3.5rem); color: var(--primary); margin-bottom: 1.5rem; letter-spacing: -0.02em; }
         .hero-description { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; }
 
-        .quote-box { position: relative; background: #fff; padding: 2rem; border-radius: 20px; box-shadow: var(--shadow); max-width: 600px; margin: 2rem auto 0; border-left: 4px solid var(--primary); }
+        .quote-box { 
+            position: relative; 
+            background: #fff; 
+            padding: 2rem; 
+            border-radius: 20px; 
+            box-shadow: var(--shadow); 
+            max-width: 600px; 
+            margin: 2rem auto 0; 
+            border-left: 4px solid var(--primary); 
+            min-height: 140px;
+        }
         .quote-text { font-style: italic; font-size: 1.2rem; color: var(--text-main); }
 
         /* Socials */
@@ -117,8 +141,15 @@
 
         .doctor-grid { display: grid; grid-template-columns: 350px 1fr; gap: 3rem; align-items: center; background: var(--bg-light); padding: 3rem; border-radius: 32px; }
         .doctor-photo-wrapper { position: relative; width: 100%; }
-        /* Оптимізація CLS для фото лікаря */
-        .doctor-photo { width: 100%; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow); background: #e2e8f0; aspect-ratio: 4/5; }
+        
+        .doctor-photo { 
+            width: 100%; 
+            border-radius: 24px; 
+            overflow: hidden; 
+            box-shadow: var(--shadow); 
+            background: #e2e8f0; 
+            aspect-ratio: 4/5;
+        }
         .doctor-photo img { width: 100%; height: 100%; object-fit: cover; }
         
         .doctor-fb-float { margin-top: 1.5rem; display: flex; justify-content: center; }
@@ -160,7 +191,15 @@
         .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
         .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
         .contact-item-icon { color: var(--primary); background: #eff6ff; padding: 0.75rem; border-radius: 12px; }
-        .map-container { width: 100%; border-radius: 24px; overflow: hidden; aspect-ratio: 16/9; box-shadow: var(--shadow); background: #e2e8f0; }
+        
+        .map-container { 
+            width: 100%; 
+            border-radius: 24px; 
+            overflow: hidden; 
+            aspect-ratio: 16/9; 
+            box-shadow: var(--shadow); 
+            background: #e2e8f0; 
+        }
 
         /* Modal */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.9); display: none; justify-content: center; align-items: center; z-index: 2000; padding: 20px; backdrop-filter: blur(8px); }
