@@ -234,15 +234,22 @@
     <header>
         <div class="container hero-content">
             <div class="location-badge">
-                <i data-lucide="map-pin" width="18" height="18"></i> м. Львів | Допомога по всій Україні
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                м. Львів | Допомога по всій Україні
             </div>
             <h1>Анонімне лікування алкогольної залежності</h1>
             <p class="hero-description">Професійна допомога від лікаря-нарколога у Львові та дистанційні консультації для пацієнтів з усієї України.</p>
             
             <div class="social-group">
-                <a href="https://t.me/dv_doctor" target="_blank" class="btn-social btn-tg" onclick="gtag('event', 'generate_lead', {'method': 'telegram'});" rel="noopener noreferrer"><i data-lucide="send"></i> Telegram</a>
-                <a href="viber://chat?number=%2B380676704004" class="btn-social btn-viber" onclick="gtag('event', 'generate_lead', {'method': 'viber'});"><i data-lucide="message-circle"></i> Viber</a>
-                <a href="https://facebook.com/dtsyhankov" target="_blank" class="btn-social btn-fb" onclick="gtag('event', 'generate_lead', {'method': 'facebook'});" rel="noopener noreferrer"><i data-lucide="facebook"></i> Facebook</a>
+                <a href="https://t.me/dv_doctor" target="_blank" class="btn-social btn-tg" onclick="gtag('event', 'generate_lead', {'method': 'telegram'});" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Telegram
+                </a>
+                <a href="viber://chat?number=%2B380676704004" class="btn-social btn-viber" onclick="gtag('event', 'generate_lead', {'method': 'viber'});">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg> Viber
+                </a>
+                <a href="https://facebook.com/dtsyhankov" target="_blank" class="btn-social btn-fb" onclick="gtag('event', 'generate_lead', {'method': 'facebook'});" rel="noopener noreferrer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Facebook
+                </a>
             </div>
 
             <div class="quote-box">
@@ -261,7 +268,7 @@
                         </article>
                         <div class="doctor-fb-float">
                             <a href="https://facebook.com/dtsyhankov" target="_blank" class="btn-social btn-fb" onclick="gtag('event', 'generate_lead', {'method': 'facebook'});" rel="noopener noreferrer">
-                                <i data-lucide="facebook"></i> Профіль Facebook
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> Профіль Facebook
                             </a>
                         </div>
                     </div>
@@ -298,7 +305,9 @@
 
                 <div class="methods-grid">
                     <article class="method-card">
-                        <div class="method-icon-container"><i data-lucide="droplet" width="40" height="40"></i></div>
+                        <div class="method-icon-container">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+                        </div>
                         <h3>Детоксикація</h3>
                         <p> Виведення з запою</p>
                         <div class="method-details" id="detail-detox">
@@ -306,39 +315,44 @@
                             <ul class="method-list">
                                 <li>Цілодобове медичне спостереження та збалансоване харчування;</li>
                                 <li>Рекомендований курс - від 3-х діб для досягнення максимальної ефективності;</li>
-                                <li>Можлива амбулаторна допомога (формат: прийшов &rarr; отримав процедуру &rarr; пішов);</li>
+                                <li>Можлива амбулаторна допомога (формат: прийшов → отримав процедуру → пішов);</li>
                             </ul>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('detox')" aria-label="Детальніше про детоксикацію">
-                            <span>Детальніше</span> <i data-lucide="chevron-down" width="20" height="20"></i>
+                            <span>Детальніше</span> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                         </button>
                     </article>
 
                     <article class="method-card">
-                        <div class="method-icon-container"><i data-lucide="syringe" width="40" height="40"></i></div>
+                        <div class="method-icon-container">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/></svg>
+                        </div>
                         <h3>Укол (кодування) або підшивка від алкоголізму</h3>
                         <p>Медикаментозний захист від вживання алкоголю шляхом введення препаратів тривалої дії.</p>
                         <div class="method-details" id="detail-coding">
                             <p><strong>Укол від алкоголізму (кодування)</strong> — це внутрішньом'язове введення препарату. Метод демонструє високу ефективність, але потребує утримання від алкоголю не менше 3-х діб до процедури.</p>
-                            <p><strong>Підшивка від алкоголізму</strong> — введення лікарського засобу методом малоінвазивної хірургічної процедури (невеличкий розріз під лопаткою &rarr; ввели імплант &rarr; зашили). Обов'язкова умова не вживати алкоголь 3 доби до процедури.</p>
+                            <p><strong>Підшивка від алкоголізму</strong> — введення лікарського засобу методом малоінвазивної хірургічної процедури (невеличкий розріз під лопаткою → ввели імплант → зашили). Обов'язкова умова не вживати алкоголь 3 доби до процедури.</p>
                             <p>У роботі використовуються виключно сертифіковані препарати виробництва США.</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('coding')">
-                            <span>Детальніше</span> <i data-lucide="chevron-down" width="20" height="20"></i>
+                            <span>Детальніше</span> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                         </button>
                     </article>
 
                     <article class="method-card">
-                        <div class="method-icon-container"><i data-lucide="brain" width="40" height="40"></i></div>
+                        <div class="method-icon-container">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.54-2.44 2.5 2.5 0 0 1 2.5-2.5H12"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.54-2.44 2.5 2.5 0 0 0-2.5-2.5H12"/></svg>
+                        </div>
                         <h3>Гіпноз (гіпнотерапія)</h3>
                         <p>Використання глибинних станів розслаблення для корекції залежної поведінки за швейцарськими стандартами.</p>
                         <div class="method-details" id="detail-hypno">
-                            <p>Ефективний метод позбавлення від алкогольної залежності, який полягає у формуванні у пацієнта відрази до алкоголю та глибокого внутрішнього переконання про шкідливість вживання алкогольних напоїв на підсвідомому рівні.</p>
-                            <p>Під час сеансу гіпнотерапії в підсвідомості пацієнта, який перебуває в стані максимального фізичного та ментального розслаблення, фіксуються певні навіювання про шкоду, яку приносить алкоголь. В подальшому ці навіювання забезпечують негативне ставлення пацієнта до алкоголю і, як наслідок, позбавлення алкогольної залежності.</p>
-                            <p>Лікар Дмитро Циганков є <strong>сертифікованим гіпнотерапевтом OMNI HYPNOSIS (Швейцарія) і успішно використовує гіпнотерапію для лікування алкоголізму та нікотинової залежності.</strong></p>
+                            <p>Ефективний метод позбавлення від алкогольної залежності...</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('hypno')">
-                            <span>Детальніше</span> <i data-lucide="chevron-down" width="20" height="20"></i>
+                            <span>Детальніше</span> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                         </button>
                     </article>
 
@@ -367,12 +381,15 @@
                             <p>Під час процедури голковколювання виробляються ендорфіни, які допомагають знизити рівень стресу.</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('acu')">
-                            <span>Детальніше</span> <i data-lucide="chevron-down" width="20" height="20"></i>
+                            <span>Детальніше</span> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                         </button>
                     </article>
 
                     <article class="method-card">
-                        <div class="method-icon-container"><i data-lucide="zap" size="40"></i></div>
+                        <div class="method-icon-container">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M12 2v2"/><path d="m4.9 4.9 1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/><path d="M20 14h2"/><path d="M2 14h2"/><path d="M12 12v10"/><path d="M8 22h8"/></svg>
+                        </div>
                         <h3>ТЕС-терапія (Електростимуляція)</h3>
                         <p>Апаратний метод відновлення вольових функцій мозку та нормалізації психоемоційного стану.</p>
                         <div class="method-details" id="detail-tes">
@@ -380,12 +397,15 @@
                             <p>Подразнення префронтальної кори головного мозку слабким електричним струмом за допомогою спеціального апарату дозволяє ефективно лікувати симптоми, що супроводжують алкогольну залежність-депресивні та тривожні стани, порушення сну.</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('tes')">
-                            <span>Детальніше</span> <i data-lucide="chevron-down" width="20" height="20"></i>
+                            <span>Детальніше</span> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                         </button>
                     </article>
 
                     <article class="method-card">
-                        <div class="method-icon-container"><i data-lucide="heart" size="40"></i></div>
+                        <div class="method-icon-container">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                        </div>
                         <h3>Психотерапія у м. Львів</h3>
                         <p>Глибока індивідуальна робота з психологічними причинами залежності в анонімному форматі.</p>
                         <div class="method-details" id="detail-psy">
@@ -397,7 +417,8 @@
                             </ul>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('psy')">
-                            <span>Детальніше</span> <i data-lucide="chevron-down" width="20" height="20"></i>
+                            <span>Детальніше</span> 
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                         </button>
                     </article>
                 </div>
@@ -418,16 +439,15 @@
                     </div>
                     
                     <div id="quiz-result" class="test-result">
-                        <i data-lucide="alert-triangle" width="56" height="56" color="#dc2626" style="margin-bottom: 1.5rem;"></i>
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1.5rem;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                         <h3 id="result-title" style="margin-bottom: 1rem; color: var(--danger);">Результат аналізу</h3>
                         <p id="result-text" style="margin-bottom: 2rem;"></p>
-                        
                         <div class="social-group">
                             <a href="https://t.me/dv_doctor" target="_blank" class="btn-social btn-tg" rel="noopener noreferrer">
-                                <i data-lucide="send"></i> Telegram
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Telegram
                             </a>
                             <a href="viber://chat?number=%2B380676704004" class="btn-social btn-viber">
-                                <i data-lucide="message-circle"></i> Viber
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg> Viber
                             </a>
                         </div>
                     </div>
@@ -441,25 +461,27 @@
                     <h2 class="section-title">Контакти та розташування</h2>
                     <p>Прийом проводиться за попереднім записом у сучасній клініці у м. Львів.</p>
                 </div>
-                
                 <div class="contact-grid">
                     <div class="contact-info">
                         <div class="contact-item">
-                            <div class="contact-item-icon"><i data-lucide="map-pin" width="24" height="24"></i></div>
+                            <div class="contact-item-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
                             <div>
                                 <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Адреса клініки:</h3>
-                                <p style="color: var(--text-muted);"><strong>Medical Home Clinic +</strong><br>проспект В'ячеслава Чорновола, 55<br>м. Львів, 79000</p>
+                                <p style="color: var(--text-muted);"><strong>Medical Home Clinic +</strong><br>проспект Чорновола, 55<br>м. Львів</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-item-icon"><i data-lucide="clock" width="24" height="24"></i></div>
+                            <div class="contact-item-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
                             <div>
                                 <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Графік прийому:</h3>
                                 <p style="color: var(--text-muted);">За попереднім записом</p>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="map-container">
                         <iframe 
                             src="about:blank" 
@@ -484,30 +506,26 @@
                 <a href="#doctor">Про лікаря</a>
                 <a href="#methods">Методи</a>
                 <a href="#test">Тест</a>
-                <a href="https://t.me/dv_doctor" rel="noopener noreferrer"><i data-lucide="send" size="18"></i> Telegram</a>
-                <a href="viber://chat?number=%2B380676704004"><i data-lucide="message-circle" size="18"></i> Viber</a>
-                <a href="https://facebook.com/dtsyhankov" rel="noopener noreferrer"><i data-lucide="facebook" size="18"></i> Facebook</a>
+                <a href="https://t.me/dv_doctor" rel="noopener noreferrer">Telegram</a>
+                <a href="viber://chat?number=%2B380676704004">Viber</a>
+                <a href="https://facebook.com/dtsyhankov" rel="noopener noreferrer">Facebook</a>
             </nav>
-            <p style="font-size: 0.85rem;">&copy; 2021-2026 Лікар-нарколог Дмитро Циганков. Лікування алкоголізму Львів та Україна. Конфіденційно.</p>
+            <p style="font-size: 0.85rem;">© 2021-2026 Лікар-нарколог Дмитро Циганков.</p>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/lucide@0.300.0/dist/umd/lucide.min.js"></script>
     <script>
-        // Ініціалізація іконок після завантаження DOM
         document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            
-            // Відкладене завантаження карти для PageSpeed
+            // Відкладене завантаження карти
             const mapFrame = document.getElementById('google-map');
             if (mapFrame) {
                 setTimeout(() => {
                     mapFrame.src = mapFrame.getAttribute('data-src');
-                }, 2000);
+                }, 1500);
             }
+            loadQuestion();
         });
 
-        // Тест логіка
         const questions = [
             "Чи були у Вас раніше спроби кинути пити самостійно?",
             "Чи відчуваєте Ви непереборне бажання випити у стресових ситуаціях?",
@@ -546,16 +564,19 @@
             document.getElementById('result-text').innerText = score >= 1
                 ? "Ваші відповіді вказують на високу ймовірність залежності. Рекомендуємо звернутися за анонімною консультацією."
                 : "Критичних ознак залежності зараз не виявлено.";
-            lucide.createIcons();
         }
-        loadQuestion();
 
         function toggleDetail(id) {
             const detail = document.getElementById('detail-' + id);
-            const button = detail.closest('.method-card').querySelector('.btn-more');
+            const card = detail.closest('.method-card');
+            const button = card.querySelector('.btn-more');
             const isActive = detail.classList.toggle('active');
             button.classList.toggle('active');
             button.querySelector('span').innerText = isActive ? 'Згорнути' : 'Детальніше';
+            
+            const svg = button.querySelector('svg');
+            svg.style.transform = isActive ? 'rotate(180deg)' : 'rotate(0deg)';
+            svg.style.transition = 'transform 0.3s';
         }
 
         function openCertModal(el) {
