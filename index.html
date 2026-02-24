@@ -505,6 +505,7 @@
         }
 
         function showResult() {
+            gtag('event', 'quiz_completed', {'event_category': 'engagement', 'event_label': 'Test Alcohol Addiction'});
             document.getElementById('quiz-step').style.display = 'none';
             const res = document.getElementById('quiz-result');
             res.style.display = 'block';
