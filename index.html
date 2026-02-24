@@ -344,6 +344,7 @@
             transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             font-size: 0.95rem;
             color: var(--text-muted);
+            will-change: max-height; /* Performance optimization */
         }
 
         .method-details.active {
@@ -376,6 +377,11 @@
         .btn-more.active svg {
             transform: rotate(180deg);
         }
+        
+        /* Added for Forced Reflow fix */
+        .btn-more .btn-text-hide { display: none; }
+        .btn-more.active .btn-text-show { display: none; }
+        .btn-more.active .btn-text-hide { display: inline; }
 
         .method-list {
             list-style-type: none;
@@ -484,6 +490,7 @@
             aspect-ratio: 16/9;
             box-shadow: var(--shadow);
             background: #e2e8f0;
+            position: relative;
         }
 
         /* Modal */
@@ -712,7 +719,8 @@
                             </ul>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('detox')" aria-label="Детальніше про детоксикацію">
-                            <span>Детальніше</span>
+                            <span class="btn-text-show">Детальніше</span>
+                            <span class="btn-text-hide">Згорнути</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m6 9 6 6 6-6" />
@@ -744,7 +752,8 @@
                             <p>У роботі використовуються виключно сертифіковані препарати виробництва США.</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('coding')">
-                            <span>Детальніше</span>
+                            <span class="btn-text-show">Детальніше</span>
+                            <span class="btn-text-hide">Згорнути</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m6 9 6 6 6-6" />
@@ -782,7 +791,8 @@
                                     залежності.</strong></p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('hypno')">
-                            <span>Детальніше</span>
+                            <span class="btn-text-show">Детальніше</span>
+                            <span class="btn-text-hide">Згорнути</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m6 9 6 6 6-6" />
@@ -820,7 +830,8 @@
                                 стресу.</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('acu')">
-                            <span>Детальніше</span>
+                            <span class="btn-text-show">Детальніше</span>
+                            <span class="btn-text-hide">Згорнути</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m6 9 6 6 6-6" />
@@ -852,7 +863,8 @@
                                 залежність-депресивні та тривожні стани, порушення сну.</p>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('tes')">
-                            <span>Детальніше</span>
+                            <span class="btn-text-show">Детальніше</span>
+                            <span class="btn-text-hide">Згорнути</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m6 9 6 6 6-6" />
@@ -878,7 +890,8 @@
                             </ul>
                         </div>
                         <button class="btn-more" onclick="toggleDetail('psy')">
-                            <span>Детальніше</span>
+                            <span class="btn-text-show">Детальніше</span>
+                            <span class="btn-text-hide">Згорнути</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m6 9 6 6 6-6" />
@@ -968,7 +981,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="map-container">
+                    <div class="map-container" id="map-observer-target">
                         <iframe src="about:blank"
                             data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.28723385764!2d24.01745137691136!3d49.85524333000676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add0940333203%3A0xb5c083693e54b67a!2sMedical%20Home%20Clinic%20%2B!5e0!3m2!1suk!2sua!4v1700000000000"
                             title="Медичний центр Medical Home Clinic + на карті"
@@ -1000,12 +1013,30 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Lazy Map Loading via IntersectionObserver
             const mapFrame = document.getElementById('google-map');
-            if (mapFrame) {
+            const mapTarget = document.getElementById('map-observer-target');
+
+            if ('IntersectionObserver' in window) {
+                const mapObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const iframe = entry.target.querySelector('iframe');
+                            if (iframe && iframe.src === 'about:blank') {
+                                iframe.src = iframe.getAttribute('data-src');
+                            }
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { rootMargin: '200px' });
+                mapObserver.observe(mapTarget);
+            } else {
+                // Fallback for older browsers
                 setTimeout(() => {
-                    mapFrame.src = mapFrame.getAttribute('data-src');
-                }, 1500);
+                    if (mapFrame.src === 'about:blank') mapFrame.src = mapFrame.getAttribute('data-src');
+                }, 3000);
             }
+            
             loadQuestion();
         });
 
@@ -1049,17 +1080,17 @@
                 : "Критичних ознак залежності зараз не виявлено.";
         }
 
+        // Fixed Forced Reflow function
         function toggleDetail(id) {
             const detail = document.getElementById('detail-' + id);
+            if (!detail) return;
+            
             const card = detail.closest('.method-card');
             const button = card.querySelector('.btn-more');
-            const span = button.querySelector('span');
 
-            // Toggle classes - Reflow management is now handled by the browser's CSS engine
-            const isActive = detail.classList.toggle('active');
+            // Toggle logic using CSS classes only to avoid forced synchronous layouts
+            detail.classList.toggle('active');
             button.classList.toggle('active');
-
-            span.innerText = isActive ? 'Згорнути' : 'Детальніше';
         }
 
         function openCertModal(el) {
@@ -1071,9 +1102,8 @@
 
         function closeModal() {
             document.getElementById('certModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = '';
         }
     </script>
 </body>
-
 </html>
